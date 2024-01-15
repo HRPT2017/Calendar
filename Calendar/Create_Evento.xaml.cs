@@ -99,9 +99,9 @@ namespace Calendar
 
                     List<int> selectedIds = lb_competicoes.SelectedItems.Cast<Competicao>().Select(entity => entity.Id).ToList();
 
-                    if (!string.IsNullOrEmpty(aux))
+                    if (!string.IsNullOrEmpty(result))
                     {
-                        if (!ev.Contains(aux))
+                        if (!ev.Contains(result))
                         {
                             if (dp_data.SelectedDate != null)
                             {
@@ -136,8 +136,20 @@ namespace Calendar
                     else MessageBox.Show("Insira o nome de um Evento");
 
                 }
+            double mainWindowLeft = Left;
+            double mainWindowTop = Top;
+            double mainWindowWidth = Width;
+            double mainWindowHeight = Height;
+            WindowState mainWindowState = WindowState;
 
-
+            Create_Evento eve = new Create_Evento();
+            eve.Left = mainWindowLeft;
+            eve.Top = mainWindowTop;
+            eve.Width = mainWindowWidth;
+            eve.Height = mainWindowHeight;
+            eve.WindowState = mainWindowState;
+            eve.Show();
+            Close();
         }
     }
 }

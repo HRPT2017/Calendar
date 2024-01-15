@@ -92,44 +92,60 @@ namespace Calendar
                 Modalidade selectedModalidade = (Modalidade)cb_modalidade.SelectedItem;
                 int selectedModalidadeId = selectedModalidade.Id;
 
-                    List<int> selectedIds = lb_eventos.SelectedItems.Cast<Evento>().Select(entity => entity.Id).ToList();
+                List<int> selectedIds = lb_eventos.SelectedItems.Cast<Evento>().Select(entity => entity.Id).ToList();
 
-                    if (!string.IsNullOrEmpty(aux))
+                if (!string.IsNullOrEmpty(result))
+                {
+                    if (!ev.Contains(result))
                     {
-                        if (!ev.Contains(aux))
-                        {
 
-                            var evento = new Competicao()
+                        var evento = new Competicao()
+                        {
+                            Modalidade_Id = selectedModalidadeId,
+                            Nome = result
+                        };
+
+                        context.Add(evento);
+                        context.SaveChanges();
+                        foreach (int selectedId in selectedIds)
+                        {
+                            var jt = new JunctionTable()
                             {
-                                Modalidade_Id = selectedModalidadeId,
-                                Nome = result
+                                Evento_Id = selectedId,
+                                Competicao_Id = evento.Id
                             };
 
-                            context.Add(evento);
-                            context.SaveChanges();
-                            foreach (int selectedId in selectedIds)
-                            {
-                                var jt = new JunctionTable()
-                                {
-                                    Evento_Id = selectedId,
-                                    Competicao_Id = evento.Id
-                                };
-
-                                context.JunctionTable.Add(jt);
-                            }
-                            context.SaveChanges();
-                            cb_modalidade.SelectedItem = null;
-                            tb_competicao.Text = null;
-                            lb_eventos.ItemsSource = null;
-
+                            context.JunctionTable.Add(jt);
                         }
-                        else MessageBox.Show("Competicao já existe");
+                        context.SaveChanges();
+                        cb_modalidade.SelectedItem = null;
+                        tb_competicao.Text = null;
+                        lb_eventos.ItemsSource = null;
+
                     }
-                    else MessageBox.Show("Insira o nome de um Competicao");
+                    else
+                    {
+                        MessageBox.Show("Competicao já existe");
+                    }
+                }
+                else MessageBox.Show("Insira o nome de um Competicao");
 
             }
             else MessageBox.Show("Seleciona uma modalidade");
+            double mainWindowLeft = Left;
+            double mainWindowTop = Top;
+            double mainWindowWidth = Width;
+            double mainWindowHeight = Height;
+            WindowState mainWindowState = WindowState;
 
+            Create_Competicao eve = new Create_Competicao();
+            eve.Left = mainWindowLeft;
+            eve.Top = mainWindowTop;
+            eve.Width = mainWindowWidth;
+            eve.Height = mainWindowHeight;
+            eve.WindowState = mainWindowState;
+            eve.Show();
+            Close();
         }
 
     }
