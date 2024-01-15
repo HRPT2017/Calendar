@@ -259,7 +259,7 @@ namespace Calendar
 
         private void bt_ical_Click(object sender, RoutedEventArgs e)
         {
-            GenerateICalFile(@"C:\Users\hugo1\OneDrive\Ambiente de Trabalho\Hugo\Trabalho\Calendar\FPAK.ics");
+            GenerateICalFile(@"C:\Users\hugo1\OneDrive\Ambiente de Trabalho\Hugo\FPAK.ics");
             MessageBox.Show("ICS file generated successfully!");
         }
 
