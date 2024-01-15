@@ -265,7 +265,7 @@ namespace Calendar
 
         private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            if(WindowState == WindowState.Maximized)
+            if (WindowState == WindowState.Maximized)
             {
                 lb_eventos.Margin = new Thickness(35, 169, 1105, 80);
             }

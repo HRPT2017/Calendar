@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calendar"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="450" Width="800" 
         SizeChanged="Window_SizeChanged">
     <Grid>
         <!--Main Window-->
@@ -14,7 +14,7 @@
         <Label x:Name="l_competicao" Content="Competição"  HorizontalAlignment="Left" Margin="35,69,0,0" VerticalAlignment="Top" Width="120" />
         <ComboBox x:Name="cb_competicao" HorizontalAlignment="Left" Margin="35,99,0,0" VerticalAlignment="Top" Width="205" Height="25" SelectionChanged="cb_competicao_SelectionChanged"/>
         <Label x:Name="l_evento" Content="Evento"  HorizontalAlignment="Left" Margin="35,138,0,0" VerticalAlignment="Top" Width="120"/>
-        <ListBox x:Name="lb_eventos" Margin="35,169,439,80" >
+        <ListBox x:Name="lb_eventos" Margin="35,182,429,67" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
