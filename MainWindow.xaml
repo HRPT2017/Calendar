@@ -1,0 +1,39 @@
+﻿<Window x:Class="Calendar.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calendar"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        SizeChanged="Window_SizeChanged">
+    <Grid>
+        <!--Main Window-->
+        <Label x:Name="l_modalidade" Content="Modalidade"  HorizontalAlignment="Left" Margin="35,16,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cb_modalidade"  HorizontalAlignment="Left" Margin="35,42,0,0" VerticalAlignment="Top" Width="205" SelectionChanged="cb_modalidade_SelectionChanged" Height="22"/>
+        <Label x:Name="l_competicao" Content="Competição"  HorizontalAlignment="Left" Margin="35,69,0,0" VerticalAlignment="Top" Width="120" />
+        <ComboBox x:Name="cb_competicao" HorizontalAlignment="Left" Margin="35,99,0,0" VerticalAlignment="Top" Width="205" Height="25" SelectionChanged="cb_competicao_SelectionChanged"/>
+        <Label x:Name="l_evento" Content="Evento"  HorizontalAlignment="Left" Margin="35,138,0,0" VerticalAlignment="Top" Width="120"/>
+        <ListBox x:Name="lb_eventos" Margin="35,169,439,80" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Nome}" FontWeight="Bold" />
+                        <TextBlock Text="{Binding Data, StringFormat='dd/MM/yyyy'}" HorizontalAlignment="Left" TextTrimming="None" MaxWidth="65" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <!--Menu buttons-->
+        <Button x:Name="bt_create_competicao" Click="bt_create_competicao_Click" Content="Criar Competição" HorizontalAlignment="Left" Margin="430,16,0,0" VerticalAlignment="Top" Height="35" Width="143"/>
+        <Button x:Name="bt_create_evento" Click="bt_create_evento_Click" Content="Criar Event" HorizontalAlignment="Left" Margin="595,16,0,0" VerticalAlignment="Top" Height="35" Width="143"/>
+        <Button x:Name="bt_edit_menu_evento" Click="bt_edit_menu_evento_Click" Content="Editar Evento" HorizontalAlignment="Left" Margin="595,69,0,0" VerticalAlignment="Top" Height="35" Width="143"/>
+        <Button x:Name="bt_edit_menu_competicao" Click="bt_edit_menu_competicao_Click" Content="Editar Competição" HorizontalAlignment="Left" Margin="430,69,0,0" VerticalAlignment="Top" Height="35" Width="143"/>
+        <Button x:Name="bt_remove_menu_evento" Click="bt_remove_menu_evento_Click" Content="Eliminar Evento" HorizontalAlignment="Left" Margin="595,129,0,0" VerticalAlignment="Top" Height="35" Width="143"/>
+        <Button x:Name="bt_delete_competicao" Click="bt_delete_competicao_Click" Content="Eliminar Competição" HorizontalAlignment="Left" Margin="430,129,0,0" VerticalAlignment="Top" Height="35" Width="143"/>
+        <Button x:Name="bt_ical" Content="Exportar Ical" Click="bt_ical_Click" HorizontalAlignment="Left" Margin="502,182,0,0" VerticalAlignment="Top" Height="35" Width="164"/>
+
+
+
+    </Grid>
+</Window>
