@@ -1,0 +1,567 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Ralis - Rali Terras D'aboboreira
+DTSTART:20240426
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Ralis - Rallye Serras de Fafe, Felgueiras, Boticas, e Cabeceiras de Basto
+DTSTART:20240223
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Ralis - Rallye Casinos Do Algarve
+DTSTART:20240315
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Ralis - Rali Vieira Do Minho
+DTSTART:20240329
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Ralis - Vodafone Rally De Portugal
+DTSTART:20240509
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Ralis - Rali de Castelo Branco
+DTSTART:20240621
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Ralis - Rali Vinho Da Madeira
+DTSTART:20240801
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Ralis - Rali da Água Transibérico Eurocidade Chaves Verin
+DTSTART:20240913
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Ralis - Rallye Vidreiro Centro de Portugal
+DTSTART:20241011
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Drift - 1ª Prova do Campeonato de Portugal de Drift - Montemor
+DTSTART:20240323
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Drift - Drift Castelo Branco
+DTSTART:20240427
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Drift - CAMPEONATO DE PORTUGAL DE DRIFT - Circuito Braga
+DTSTART:20240615
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Drift - 4ª Prova CP Drift Pombal
+DTSTART:20240113
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Drift - CAMPEONATO PORTUGAL DRIFT - Circuito Pinhel
+DTSTART:20240817
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Drift - CAMPEONATO DE PORTUGAL DE DRIFT - Circuito Melgaço
+DTSTART:20241005
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Velocidade Extra - GT Winter Series - Estoril
+DTSTART:20240113
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Velocidade Extra - GT Winter Series - Portimão
+DTSTART:20240120
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal Júnior de Ralis - Rali Terras D'aboboreira
+DTSTART:20240426
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal Júnior de Ralis - Rallye Serras de Fafe, Felgueiras, Boticas, e Cabeceiras de Basto
+DTSTART:20240223
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal Júnior de Ralis - Rallye Casinos Do Algarve
+DTSTART:20240315
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal Júnior de Ralis - Rali da Água Transibérico Eurocidade Chaves Verin
+DTSTART:20240913
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal Júnior de Ralis - Rallye Vidreiro Centro de Portugal
+DTSTART:20241011
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Ralis 2RM - Rali Terras D'aboboreira
+DTSTART:20240426
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Ralis 2RM - Rallye Serras de Fafe, Felgueiras, Boticas, e Cabeceiras de Basto
+DTSTART:20240223
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Ralis 2RM - Rallye Casinos Do Algarve
+DTSTART:20240315
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Ralis 2RM - Vodafone Rally De Portugal
+DTSTART:20240509
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Ralis 2RM - Rali de Castelo Branco
+DTSTART:20240621
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Ralis 2RM - Rali Vinho Da Madeira
+DTSTART:20240801
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Ralis 2RM - Rali da Água Transibérico Eurocidade Chaves Verin
+DTSTART:20240913
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Ralis 2RM - Rallye Vidreiro Centro de Portugal
+DTSTART:20241011
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Promo de Ralis - Rali Terras D'aboboreira
+DTSTART:20240426
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Promo de Ralis - Rallye Serras de Fafe, Felgueiras, Boticas, e Cabeceiras de Basto
+DTSTART:20240223
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Promo de Ralis - Rallye Casinos Do Algarve
+DTSTART:20240315
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Promo de Ralis - Rali Vieira Do Minho
+DTSTART:20240329
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Promo de Ralis - Rali de Castelo Branco
+DTSTART:20240621
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Promo de Ralis - 12 Rali de Viana do Castelo 2024
+DTSTART:20240712
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Promo de Ralis - 11º Constálica Rallye Vouzela e Viseu
+DTSTART:20240830
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Promo de Ralis - Rali da Água Transibérico Eurocidade Chaves Verin
+DTSTART:20240913
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Promo de Ralis - Rallye Vidreiro Centro de Portugal
+DTSTART:20241011
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal Clássicos de Ralis - Rali Terras D'aboboreira
+DTSTART:20240426
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal Clássicos de Ralis - Rallye Casinos Do Algarve
+DTSTART:20240315
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal Clássicos de Ralis - Rali de Castelo Branco
+DTSTART:20240621
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal Clássicos de Ralis - Rallye Montelongo
+DTSTART:20240628
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal Clássicos de Ralis - 12 Rali de Viana do Castelo 2024
+DTSTART:20240712
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal Clássicos de Ralis - Rali da Água Transibérico Eurocidade Chaves Verin
+DTSTART:20240913
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal Clássicos de Ralis - Rallye Vidreiro Centro de Portugal
+DTSTART:20241011
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato dos Açores de Ralis - XXVI Além Mar Rali TAC
+DTSTART:20240405
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato dos Açores de Ralis - XXXV Rali Ilha Azul
+DTSTART:20240524
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato dos Açores de Ralis - Além Mar Rali
+DTSTART:20240628
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato dos Açores de Ralis - XLIII Explore Santa Maria Rally
+DTSTART:20240809
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato dos Açores de Ralis - XXVII Além Mar Rali 45º Ilha Lilás
+DTSTART:20240927
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato dos Açores de Ralis - XIII PICOWINES RALI
+DTSTART:20241018
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato dos Açores de Ralis - Azores Rallye
+DTSTART:20241108
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato de Ralis CORAL da Madeira - Rali do Marítimo/Município de Machico 2024
+DTSTART:20240308
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato de Ralis CORAL da Madeira - XX Rali da Calheta
+DTSTART:20240405
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato de Ralis CORAL da Madeira - Rali Município de São Vicente
+DTSTART:20240503
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato de Ralis CORAL da Madeira - Rali da Ribeira Brava
+DTSTART:20240607
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato de Ralis CORAL da Madeira - Rali 100 à Hora
+DTSTART:20240712
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato de Ralis CORAL da Madeira - Rali Vinho Da Madeira
+DTSTART:20240801
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato de Ralis CORAL da Madeira - Rali Municípios do Funchal e Câmara de Lobos
+DTSTART:20240927
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal GT Ralis - Rali de Castelo Branco
+DTSTART:20240621
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal GT Ralis - 12 Rali de Viana do Castelo 2024
+DTSTART:20240712
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal GT Ralis - Rali Vinho Da Madeira
+DTSTART:20240801
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal GT Ralis - 11º Constálica Rallye Vouzela e Viseu
+DTSTART:20240830
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal GT Ralis - Rali da Água Transibérico Eurocidade Chaves Verin
+DTSTART:20240913
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal GT Ralis - Rallye Vidreiro Centro de Portugal
+DTSTART:20241011
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start Norte de Ralis - Rali Vieira Do Minho
+DTSTART:20240329
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start Norte de Ralis - 18º Rali Gondomar
+DTSTART:20240412
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start Norte de Ralis - Rali de Santo Tirso
+DTSTART:20240503
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start Norte de Ralis - Rali De Vila Nova De Famalicão 2024
+DTSTART:20240524
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start Norte de Ralis - Rallye Montelongo
+DTSTART:20240628
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start Norte de Ralis - 12 Rali de Viana do Castelo 2024
+DTSTART:20240712
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start Norte de Ralis - 13º Rali Município De Mesão Frio
+DTSTART:20240831
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start Norte de Ralis - Rali de Murça
+DTSTART:20241115
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start Centro de Ralis - Rali Cidade Termal - São Pedro do Sul
+DTSTART:20240322
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start Centro de Ralis - IV Rally de Resende
+DTSTART:20240405
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start Centro de Ralis - Rallye CAMG
+DTSTART:20240420
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start Centro de Ralis - Rali Alitém
+DTSTART:20240504
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start Centro de Ralis - 11º Constálica Rallye Vouzela e Viseu
+DTSTART:20240830
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start Centro de Ralis - Rali do CAC
+DTSTART:20240921
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start Sul de Ralis - Rallye Casinos Do Algarve
+DTSTART:20240315
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start Sul de Ralis - 11º Rali Cidade de Portimão
+DTSTART:20240420
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start Sul de Ralis - 15. Rally Flôr do Alentejo-Cidade de Serpa
+DTSTART:20240524
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start Sul de Ralis - Rali de Vila do Bispo
+DTSTART:20240706
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start Sul de Ralis - Rali Município de Albufeira
+DTSTART:20241019
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start Sul de Ralis - 3º Rali de Tavira
+DTSTART:20241123
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Taça de Portugal de Ralis - Rally De Lisboa
+DTSTART:20240606
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Taça de Portugal de Ralis Regionais - Claudino Romeiro - Rali de Cantanhede
+DTSTART:20241108
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start 2RM Norte de Ralis - Rali Vieira Do Minho
+DTSTART:20240329
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start 2RM Norte de Ralis - 18º Rali Gondomar
+DTSTART:20240412
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start 2RM Norte de Ralis - Rali de Santo Tirso
+DTSTART:20240503
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start 2RM Norte de Ralis - Rali De Vila Nova De Famalicão 2024
+DTSTART:20240524
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start 2RM Norte de Ralis - Rallye Montelongo
+DTSTART:20240628
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start 2RM Norte de Ralis - 12 Rali de Viana do Castelo 2024
+DTSTART:20240712
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start 2RM Norte de Ralis - 13º Rali Município De Mesão Frio
+DTSTART:20240831
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start 2RM Norte de Ralis - Rali de Murça
+DTSTART:20241115
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start 2RM Centro de Ralis - Rali Cidade Termal - São Pedro do Sul
+DTSTART:20240322
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start 2RM Centro de Ralis - IV Rally de Resende
+DTSTART:20240405
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start 2RM Centro de Ralis - Rallye CAMG
+DTSTART:20240420
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start 2RM Centro de Ralis - Rali Alitém
+DTSTART:20240504
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start 2RM Centro de Ralis - 11º Constálica Rallye Vouzela e Viseu
+DTSTART:20240830
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start 2RM Centro de Ralis - Rali do CAC
+DTSTART:20240921
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start 2RM Centro de Ralis - Rali de Cantanhede
+DTSTART:20241108
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start 2RM Sul de Ralis - Rallye Casinos Do Algarve
+DTSTART:20240315
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start 2RM Sul de Ralis - 11º Rali Cidade de Portimão
+DTSTART:20240420
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start 2RM Sul de Ralis - 15. Rally Flôr do Alentejo-Cidade de Serpa
+DTSTART:20240524
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start 2RM Sul de Ralis - Rali de Vila do Bispo
+DTSTART:20240706
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start 2RM Sul de Ralis - Rali Município de Albufeira
+DTSTART:20241019
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Start 2RM Sul de Ralis - 3º Rali de Tavira
+DTSTART:20241123
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Ralicross - 61º Mação Verde Horizonte
+DTSTART:20240427
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Ralicross - Campeonato De Portugal Ralicross e Kartcross Montalegre I
+DTSTART:20240525
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Ralicross - 51º Ralicross de Sever do Vouga
+DTSTART:20240615
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Ralicross - Campeonato Portugal de Ralicross | Kartcross - Lousada I
+DTSTART:20240713
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Ralicross - 62º Mação Verde Horizonte
+DTSTART:20240831
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Ralicross - 52º Ralicross de Sever do Vouga
+DTSTART:20240928
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Ralicross - Campeonato Portugal de Ralicross | Kartcross - Lousada II
+DTSTART:20241019
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Kartcross - 61º Mação Verde Horizonte
+DTSTART:20240427
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Kartcross - Campeonato De Portugal Ralicross e Kartcross Montalegre I
+DTSTART:20240525
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Kartcross - 51º Ralicross de Sever do Vouga
+DTSTART:20240615
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Kartcross - Campeonato Portugal de Ralicross | Kartcross - Lousada I
+DTSTART:20240713
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Kartcross - 62º Mação Verde Horizonte
+DTSTART:20240831
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Kartcross - 52º Ralicross de Sever do Vouga
+DTSTART:20240928
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Kartcross - Campeonato Portugal de Ralicross | Kartcross - Lousada II
+DTSTART:20241019
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Taça de Portugal de Ralicross/Kartcross - Taça de Portugal Ralicross e Kartcross - Montalegre
+DTSTART:20241109
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Open Portugal de Ralicross e Kartcross - Open de Portugal de Ralicross - Castelo Branco
+DTSTART:20240323
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato de Portugal de Iniciados de Ralicross - 61º Mação Verde Horizonte
+DTSTART:20240427
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato de Portugal de Iniciados de Ralicross - Campeonato De Portugal Ralicross e Kartcross Montalegre I
+DTSTART:20240525
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato de Portugal de Iniciados de Ralicross - 51º Ralicross de Sever do Vouga
+DTSTART:20240615
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato de Portugal de Iniciados de Ralicross - Campeonato Portugal de Ralicross | Kartcross - Lousada I
+DTSTART:20240713
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato de Portugal de Iniciados de Ralicross - 62º Mação Verde Horizonte
+DTSTART:20240831
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato de Portugal de Iniciados de Ralicross - 52º Ralicross de Sever do Vouga
+DTSTART:20240928
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato de Portugal de Iniciados de Ralicross - Campeonato Portugal de Ralicross | Kartcross - Lousada II
+DTSTART:20241019
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Troféu Júnior de Kartcross - 61º Mação Verde Horizonte
+DTSTART:20240427
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Troféu Júnior de Kartcross - Campeonato De Portugal Ralicross e Kartcross Montalegre I
+DTSTART:20240525
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Troféu Júnior de Kartcross - Campeonato Portugal de Ralicross | Kartcross - Lousada I
+DTSTART:20240713
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Troféu Júnior de Kartcross - 52º Ralicross de Sever do Vouga
+DTSTART:20240928
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Troféu Júnior de Kartcross - Campeonato Portugal de Ralicross | Kartcross - Lousada II
+DTSTART:20241019
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Prova Extra Popcross - Campeonato De Portugal Ralicross e Kartcross Montalegre I
+DTSTART:20240525
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Open de Portugal de Drift - Open Day Drift - Lousada 2023
+DTSTART:20240309
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Karting Toyota - CPK 1 - Circuito de Leiria
+DTSTART:20240316
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Campeonato Portugal de Karting Toyota - CPK 2 - Circuito Viana do Castelo
+DTSTART:20240420
+END:VEVENT
+END:VCALENDAR
