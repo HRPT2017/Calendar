@@ -73,3 +73,4 @@ C:\Users\hugo1\OneDrive\Ambiente de Trabalho\Hugo\Trabalho\Calendar\Calendar\bin
 C:\Users\hugo1\OneDrive\Ambiente de Trabalho\Hugo\Trabalho\Calendar\Calendar\bin\Debug\net8.0-windows\NodaTime.dll
 C:\Users\hugo1\OneDrive\Ambiente de Trabalho\Hugo\Trabalho\Calendar\Calendar\bin\Debug\net8.0-windows\antlr.runtime.dll
 C:\Users\hugo1\OneDrive\Ambiente de Trabalho\Hugo\Trabalho\Calendar\Calendar\obj\Debug\net8.0-windows\Calendar.sourcelink.json
+C:\Users\hugo1\OneDrive\Ambiente de Trabalho\Hugo\Trabalho\Calendar\Calendar\obj\Debug\net8.0-windows\Calendar_Content.g.cs

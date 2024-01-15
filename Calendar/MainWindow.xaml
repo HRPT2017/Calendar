@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Calendar"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" 
-        SizeChanged="Window_SizeChanged">
+        SizeChanged="Window_SizeChanged"
+        Icon="logo.ico">
     <Grid>
         <!--Main Window-->
         <Label x:Name="l_modalidade" Content="Modalidade"  HorizontalAlignment="Left" Margin="35,16,0,0" VerticalAlignment="Top" Width="120"/>
