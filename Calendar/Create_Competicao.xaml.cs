@@ -62,15 +62,20 @@ namespace Calendar
             }
 
         }
+        //Returns to main window
         private void bt_return_Click(object sender, RoutedEventArgs e)
         {
+            // Gets the position of the open window
             double mainWindowLeft = Left;
             double mainWindowTop = Top;
+            // Gets the size of the open window
             double mainWindowWidth = Width;
             double mainWindowHeight = Height;
+            // Gets the state(Maximized,Minimized) of the open window
             WindowState mainWindowState = WindowState;
 
             MainWindow MainWindow = new MainWindow();
+            //Apply the previous values to the new window
             MainWindow.Top = mainWindowTop;
             MainWindow.Left = mainWindowLeft;
             MainWindow.Width = mainWindowWidth;
@@ -81,6 +86,7 @@ namespace Calendar
 
         }
 
+        //Handles the create logic
         private void bt_competicao_create_Click(object sender, RoutedEventArgs e)
         {
             if (cb_modalidade != null)

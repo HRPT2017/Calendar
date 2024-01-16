@@ -7,15 +7,251 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" 
         SizeChanged="Window_SizeChanged"
-        Icon="logo.ico">
+        Icon="logo.ico"
+Background="Black"
+        >
+
+    <Window.Resources>
+
+        <!-- Default resource definitions -->
+        <SolidColorBrush x:Key="WindowBackgroundBrush" Color="#006cac"/>
+        <SolidColorBrush x:Key="SolidBorderBrush" Color="#006cac"/>
+        <SolidColorBrush x:Key="ControlBackgroundBrush" Color="#006cac"/>
+        <SolidColorBrush x:Key="ControlBorderBrush" Color="#006cac"/>
+
+        <Style x:Key="ToggleButtonStyle" TargetType="ToggleButton">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="IsTabStop" Value="False"/>
+            <Setter Property="Focusable" Value="False"/>
+            <Setter Property="ClickMode" Value="Press"/>
+            <Setter Property="Template">
+                <Setter.Value>
+
+                    <ControlTemplate TargetType="ToggleButton">
+                        <Border
+                     Name="Border"
+                     Background="{StaticResource ControlBackgroundBrush}"
+                     BorderBrush="{StaticResource ControlBorderBrush}"
+                     BorderThickness="1"
+                     SnapsToDevicePixels="True">
+                            <ContentPresenter
+                         Name="ContentPresenter"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center"
+                         SnapsToDevicePixels="True"
+                         RecognizesAccessKey="True" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="#007ACC" />
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="#005A9E" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="#004A80" />
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="Border" Property="Background" Value="#444444" />
+                                <Setter TargetName="Border" Property="BorderBrush" Value="#888888" />
+                                <Setter Property="Foreground" Value="#888888"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+
+            </Setter>
+        </Style>
+        <!--Style definition for ComboBoxes-->
+        <Style TargetType="ComboBox">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Background" Value="#2E2E2E" />
+            <Setter Property="BorderBrush" Value="#006cac" />
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="Padding" Value="5,2" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBox">
+                        <Grid>
+                            <ToggleButton
+                         Name="ToggleButton"
+                         Grid.Column="2"
+                         ClickMode="Press"
+                         Focusable="false"
+                         IsChecked="{Binding Path=IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+                         Style="{StaticResource ToggleButtonStyle}" />
+                            <ContentPresenter
+                         Name="ContentSite"
+                         ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                         ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+                         Content="{TemplateBinding SelectionBoxItem}"
+                         ContentStringFormat="{TemplateBinding SelectionBoxItemStringFormat}"
+                         HorizontalAlignment="Left"
+                         IsHitTestVisible="False"
+                         Margin="3,3,23,3"
+                         VerticalAlignment="Center" />
+                            <Path x:Name="Arrow"
+                           Grid.Column="1"
+                           Fill="Wheat"
+                           Margin="0,0,10,0"
+                           HorizontalAlignment="Right"
+                           VerticalAlignment="Center"
+                           Data="M0,0 L4,4 L8,0 Z"/>
+                            <Popup
+                         Name="Popup"
+                         AllowsTransparency="True"
+                         Focusable="False"
+                         IsOpen="{TemplateBinding IsDropDownOpen}"
+                         PopupAnimation="Slide">
+                                <Grid Name="DropDown" SnapsToDevicePixels="True">
+                                    <Border
+                                 Name="DropDownBorder"
+                                 Background="{StaticResource WindowBackgroundBrush}"
+                                 BorderBrush="{StaticResource SolidBorderBrush}"
+                                 BorderThickness="1" />
+                                    <ScrollViewer>
+                                        <ItemsPresenter />
+                                    </ScrollViewer>
+                                </Grid>
+                            </Popup>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!--Style definition for Items of ListBoxes-->
+        <Style TargetType="ListBoxItem">
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="BorderBrush" Value="#007ACC"/>
+            <Setter Property="BorderThickness" Value="0,0,0,1"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBoxItem">
+                        <Border
+                   Background="{TemplateBinding Background}"
+                   BorderBrush="{TemplateBinding BorderBrush}"
+                   BorderThickness="{TemplateBinding BorderThickness}"
+                   Padding="{TemplateBinding Padding}">
+                            <ContentPresenter />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="#006cac"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#006cac"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <!--Style definition for ListBoxes-->
+        <Style  TargetType="ListBox">
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="SnapsToDevicePixels" Value="True"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBox">
+                        <Border
+                     Name="Bd"
+                     Background="{TemplateBinding Background}"
+                     BorderBrush="{TemplateBinding BorderBrush}"
+                     BorderThickness="{TemplateBinding BorderThickness}"
+                     Padding="1">
+                            <ScrollViewer>
+                                <ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                            </ScrollViewer>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="BorderBrush" Value="#005A9E"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <!--Style definition for Labels-->
+        <Style TargetType="Label">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <!--Style definition for Buttons-->
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#006cac"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="#006cac"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#006cac"/>
+                    <Setter Property="BorderBrush" Value="#006cac"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <!--Style definition for TextBoxes-->
+        <Style TargetType="TextBox">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="BorderBrush" Value="#007ACC"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="PART_ContentHost" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+
+
     <Grid>
-        <!--Main Window-->
-        <Label x:Name="l_modalidade" Content="Modalidade"  HorizontalAlignment="Left" Margin="35,16,0,0" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="cb_modalidade"  HorizontalAlignment="Left" Margin="35,42,0,0" VerticalAlignment="Top" Width="205" SelectionChanged="cb_modalidade_SelectionChanged" Height="22"/>
-        <Label x:Name="l_competicao" Content="Competição"  HorizontalAlignment="Left" Margin="35,69,0,0" VerticalAlignment="Top" Width="120" />
+
+
+        <!-- Add the rest of your window content below -->
+            <!--Main Window-->
+        <!--Modalidade-->
+        <Label x:Name="l_modalidade" Content="Modalidade"  HorizontalAlignment="Left" Margin="35,16,0,0" VerticalAlignment="Top" Width="120">
+          
+        </Label>
+        <ComboBox x:Name="cb_modalidade"  HorizontalAlignment="Left" Margin="35,42,0,0" VerticalAlignment="Top" Width="205" SelectionChanged="cb_modalidade_SelectionChanged" Height="22" />
+        <!--Competição-->
+        <Label x:Name="l_competicao" Content="Competição"  HorizontalAlignment="Left" Margin="35,69,0,0" VerticalAlignment="Top" Width="120" >
+        </Label>
         <ComboBox x:Name="cb_competicao" HorizontalAlignment="Left" Margin="35,99,0,0" VerticalAlignment="Top" Width="205" Height="25" SelectionChanged="cb_competicao_SelectionChanged"/>
-        <Label x:Name="l_evento" Content="Evento"  HorizontalAlignment="Left" Margin="35,138,0,0" VerticalAlignment="Top" Width="120"/>
-        <ListBox x:Name="lb_eventos" Margin="35,182,429,67" >
+        <!--Eventos-->
+        <Label x:Name="l_evento" Content="Evento"  HorizontalAlignment="Left" Margin="35,138,0,0" VerticalAlignment="Top" Width="120">
+        </Label>
+        <ListBox x:Name="lb_eventos" Margin="35,182,373,67">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -26,15 +262,20 @@
             </ListBox.ItemTemplate>
         </ListBox>
         <!--Menu buttons-->
+        <!--Criar Competição-->
         <Button x:Name="bt_create_competicao" Click="bt_create_competicao_Click" Content="Criar Competição" HorizontalAlignment="Left" Margin="430,16,0,0" VerticalAlignment="Top" Height="35" Width="143"/>
-        <Button x:Name="bt_create_evento" Click="bt_create_evento_Click" Content="Criar Event" HorizontalAlignment="Left" Margin="595,16,0,0" VerticalAlignment="Top" Height="35" Width="143"/>
+            <!--Criar Evento-->
+        <Button x:Name="bt_create_evento" Click="bt_create_evento_Click" Content="Criar Evento" HorizontalAlignment="Left" Margin="595,16,0,0" VerticalAlignment="Top" Height="35" Width="143"/>
+        <!--Editar Evento-->
         <Button x:Name="bt_edit_menu_evento" Click="bt_edit_menu_evento_Click" Content="Editar Evento" HorizontalAlignment="Left" Margin="595,69,0,0" VerticalAlignment="Top" Height="35" Width="143"/>
+        <!--Editar Competição-->
         <Button x:Name="bt_edit_menu_competicao" Click="bt_edit_menu_competicao_Click" Content="Editar Competição" HorizontalAlignment="Left" Margin="430,69,0,0" VerticalAlignment="Top" Height="35" Width="143"/>
-        <Button x:Name="bt_remove_menu_evento" Click="bt_remove_menu_evento_Click" Content="Eliminar Evento" HorizontalAlignment="Left" Margin="595,129,0,0" VerticalAlignment="Top" Height="35" Width="143"/>
+        <!--Eliminar Evento-->
+        <Button x:Name="bt_remove_menu_evento" Click="bt_remove_menu_evento_Click" Content="Eliminar Evento" HorizontalAlignment="Left" Margin="595,129,0,0" VerticalAlignment="Top" Height="35" Width="143" />
+        <!--Eliminar Competição-->
         <Button x:Name="bt_delete_competicao" Click="bt_delete_competicao_Click" Content="Eliminar Competição" HorizontalAlignment="Left" Margin="430,129,0,0" VerticalAlignment="Top" Height="35" Width="143"/>
+        <!--Exportar Ical-->
         <Button x:Name="bt_ical" Content="Exportar Ical" Click="bt_ical_Click" HorizontalAlignment="Left" Margin="502,182,0,0" VerticalAlignment="Top" Height="35" Width="164"/>
-
-
 
     </Grid>
 </Window>

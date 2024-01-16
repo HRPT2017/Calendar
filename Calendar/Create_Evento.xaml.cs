@@ -85,6 +85,7 @@ namespace Calendar
 
         }
 
+        //Handles the creation logic
         private void bt_evento_Click(object sender, RoutedEventArgs e)
         {
             if (cb_modalidade != null)

@@ -27,16 +27,20 @@ namespace Calendar
             InitializeComponent();
             LoadModalidade();
         }
-
+        //Returns to main window
         private void bt_return_Click(object sender, RoutedEventArgs e)
         {
+            // Gets the position of the open window
             double mainWindowLeft = Left;
             double mainWindowTop = Top;
+            // Gets the size of the open window
             double mainWindowWidth = Width;
             double mainWindowHeight = Height;
+            // Gets the state(Maximized,Minimized) of the open window
             WindowState mainWindowState = WindowState;
 
             MainWindow MainWindow = new MainWindow();
+            //Apply the previous values to the new window
             MainWindow.Top = mainWindowTop;
             MainWindow.Left = mainWindowLeft;
             MainWindow.Width = mainWindowWidth;
@@ -46,15 +50,15 @@ namespace Calendar
             Close();
 
         }
+        //Load the values from the databse into the Combobox
         public void LoadModalidade()
         {
             List<Modalidade> nome = context.Modalidade.ToList();
             cb_modalidade.ItemsSource = nome;
             cb_modalidade.DisplayMemberPath = "Nome";
-
-
         }
 
+        //Handles what happens when the selected item in the combobox changes
         private void cb_modalidade_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (cb_modalidade.SelectedItem != null)
@@ -76,7 +80,7 @@ namespace Calendar
 
         }
 
-
+        //Handles what happens when the selected item in the combobox changes
         private void cb_evento_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (cb_competicao.SelectedItem != null)
@@ -112,6 +116,7 @@ namespace Calendar
             }
         }
 
+        //Handles the delete logic
         private void bt_delete_Click(object sender, RoutedEventArgs e)
         {
             if (cb_modalidade != null)

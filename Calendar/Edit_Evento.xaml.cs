@@ -43,15 +43,20 @@ namespace Calendar
             LoadModalidade();
         }
 
+        //Returns to main window
         private void bt_return_Click(object sender, RoutedEventArgs e)
         {
+            // Gets the position of the open window
             double mainWindowLeft = Left;
             double mainWindowTop = Top;
+            // Gets the size of the open window
             double mainWindowWidth = Width;
             double mainWindowHeight = Height;
+            // Gets the state(Maximized,Minimized) of the open window
             WindowState mainWindowState = WindowState;
 
             MainWindow MainWindow = new MainWindow();
+            //Apply the previous values to the new window
             MainWindow.Top = mainWindowTop;
             MainWindow.Left = mainWindowLeft;
             MainWindow.Width = mainWindowWidth;
@@ -62,6 +67,7 @@ namespace Calendar
 
         }
 
+        //Load the values from the databse into the Combobox
         public void LoadModalidade()
         {
             List<Modalidade> nome = context.Modalidade.ToList();
@@ -71,6 +77,7 @@ namespace Calendar
 
         }
 
+        //Handles what happens when the selected item in the combobox changes
         private void cb_modalidade_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (cb_modalidade.SelectedItem != null)
@@ -87,27 +94,33 @@ namespace Calendar
 
                 tb_edit_evento.Text = null;
                 dp_data_edit.Text = null;
-                lb_competicoes.ItemsSource = null;
+                lb_competicoes_edit.ItemsSource = null;
             }
 
         }
 
+        //Handles the logic behind the edit
         private void bt_edit_evento_Click(object sender, RoutedEventArgs e)
         {
             if (cb_modalidade != null)
             {
+                // Gets the Id from the selected Modalidade
                 Modalidade selectedModalidade = (Modalidade)cb_modalidade.SelectedItem;
                 int selectedModalidadeId = selectedModalidade.Id;
 
+                // Gets the Id from the selected Evento
                 Evento selectedEvento = (Evento)cb_edit_evento.SelectedItem;
                 int selectedEventoId = selectedEvento.Id;
 
                 string aux = tb_edit_evento.Text.ToString();
+                //Starts reading after the first character
                 string result = aux.TrimStart();
                 List<string> ev = context.Evento.Select(c => c.Nome).ToList();
-
+                
+                //Checks if Nome is not null
                 if (!string.IsNullOrEmpty(aux))
                 {
+                    //check if the Data is not null
                     if (dp_data_edit.SelectedDate != null || dp_data_edit.Text != null)
                     {
                         Evento eventos = context.Evento.FirstOrDefault(c => c.Id == selectedEventoId);
@@ -122,8 +135,7 @@ namespace Calendar
 
                 }
                 else MessageBox.Show("Escreva um nome de um evento");
-
-
+                //Remove the selected items and the evento from the junction table
                 if (lb_competicoes.ItemsSource != null)
                 {
                     List<int> selectedIds = lb_competicoes.SelectedItems.Cast<Competicao>().Select(entity => entity.Id).ToList();
@@ -142,7 +154,7 @@ namespace Calendar
                     }
 
                 }
-
+                //Add the selected items and the evento to the junction table
                 if (lb_competicoes_edit.SelectedItem != null)
                 {
                     List<int> selectedIds = lb_competicoes_edit.SelectedItems.Cast<Competicao>().Select(entity => entity.Id).ToList();
@@ -203,6 +215,7 @@ namespace Calendar
 
                 List<int> comp = context.JunctionTable.Select(c => c.Evento_Id).ToList();
 
+                //Gets the Competicao data through the junction table using the Evento Id
                 if (comp.Contains(selectedEventoId))
                 {
                     var result = from e1 in context.Evento

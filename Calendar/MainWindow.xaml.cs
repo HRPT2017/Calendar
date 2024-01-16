@@ -221,9 +221,10 @@ namespace Calendar
             Close();
         }
 
+        //Handles the creation of the ICS file
         public void GenerateICalFile(string filePath)
         {
-
+            //Gets nome from both Competicao and Evento through the junctiontable and also the data 
             var events = from e1 in context.Competicao
                          join junction in context.JunctionTable on e1.Id equals junction.Competicao_Id
                          join e2 in context.Evento on junction.Evento_Id equals e2.Id
@@ -234,6 +235,7 @@ namespace Calendar
                              Data = e2.Data.ToString("yyyyMMdd")
                          };
 
+            //Create the file using the previous values
             using (var fs = new FileStream(filePath, FileMode.Create, FileAccess.Write))
             using (var writer = new StreamWriter(fs))
             {
@@ -263,6 +265,7 @@ namespace Calendar
             MessageBox.Show("ICS file generated successfully!");
         }
 
+        //handles the change of size
         private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             if (WindowState == WindowState.Maximized)
