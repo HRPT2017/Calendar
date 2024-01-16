@@ -21,13 +21,13 @@ using System.Collections;
 using Microsoft.Extensions.Logging;
 using System.IO;
 
-
+/*
+ * Author: Hugo Teixeira
+ */
 
 namespace Calendar
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+    
     public partial class MainWindow : Window
     {
         DataContext context = new DataContext();

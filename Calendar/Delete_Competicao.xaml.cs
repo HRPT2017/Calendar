@@ -14,11 +14,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
+
 namespace Calendar
 {
-    /// <summary>
-    /// Lógica interna para Delete_Competicao.xaml
-    /// </summary>
     public partial class Delete_Competicao : Window
     {
         DataContext context = new DataContext();

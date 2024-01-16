@@ -25,11 +25,10 @@ using Microsoft.EntityFrameworkCore;
 using static System.Net.Mime.MediaTypeNames;
 using System.Collections;
 
+
+
 namespace Calendar
 {
-    /// <summary>
-    /// Lógica interna para Create_Competicao.xaml
-    /// </summary>
     public partial class Create_Competicao : Window
     {
         DataContext context = new DataContext();

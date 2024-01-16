@@ -29,11 +29,7 @@ using System.Collections;
 
 namespace Calendar
 {
-    /// <summary>
-    /// Lógica interna para Create_Evento.xaml
-    /// </summary>
-    /// 
-   
+
     public partial class Create_Evento : Window
     {
         DataContext context = new DataContext();

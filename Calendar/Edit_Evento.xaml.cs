@@ -27,12 +27,9 @@ using System.Collections;
 
 
 
-
 namespace Calendar
 {
-    /// <summary>
-    /// Lógica interna para Edit_Evento.xaml
-    /// </summary>
+
     public partial class Edit_Evento : Window
     {
         DataContext context = new DataContext();

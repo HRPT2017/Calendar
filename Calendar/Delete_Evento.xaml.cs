@@ -14,11 +14,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace Calendar
 {
-    /// <summary>
-    /// Lógica interna para Delete_Evento.xaml
-    /// </summary>
+
     public partial class Delete_Evento : Window
     {
         DataContext context = new DataContext();
