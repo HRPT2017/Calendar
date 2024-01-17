@@ -8,7 +8,7 @@
         Title="Delete_Competicao" Height="450" Width="800"
         Icon="logo.ico" Background="Black">
     <Window.Resources>
-        
+
         <!-- Default resource definitions -->
         <SolidColorBrush x:Key="WindowBackgroundBrush" Color="#006cac"/>
         <SolidColorBrush x:Key="SolidBorderBrush" Color="#006cac"/>
@@ -235,9 +235,9 @@
         <Label x:Name="l_modalidade" Content="Modalidade"  HorizontalAlignment="Left" Margin="35,16,0,0" VerticalAlignment="Top" Width="120"/>
         <ComboBox x:Name="cb_modalidade"  Visibility="Visible" HorizontalAlignment="Left" Margin="35,42,0,0" VerticalAlignment="Top" Width="183" SelectionChanged="cb_modalidade_SelectionChanged" Height="22"/>
         <Label x:Name="l_competicao" Content="Nome da Competição" Visibility="Visible"  HorizontalAlignment="Left" Margin="35,73,0,0" VerticalAlignment="Top" Width="160" />
-        <ComboBox x:Name="cb_competicao" Visibility="Visible" HorizontalAlignment="Left" Margin="35,99,0,0" VerticalAlignment="Top" Width="183" Height="22" SelectionChanged="cb_evento_SelectionChanged"/>
-        <Button x:Name="bt_delete" Content="Delete" Visibility="Visible" Click="bt_delete_Click" HorizontalAlignment="Left" Margin="35,143,0,0" VerticalAlignment="Top" Width="80" Height="31"/>
-        <Button x:Name="bt_return" Content="Return" Visibility="Visible" Click="bt_return_Click" HorizontalAlignment="Left" Margin="126,143,0,0" VerticalAlignment="Top" Width="92" Height="31"/>
+        <ComboBox x:Name="cb_competicao" Visibility="Visible" HorizontalAlignment="Left" Margin="35,99,0,0" VerticalAlignment="Top" Width="183" Height="28" SelectionChanged="cb_evento_SelectionChanged"/>
+        <Button x:Name="bt_delete" Content="Delete" Visibility="Visible" Click="bt_delete_Click" HorizontalAlignment="Left" Margin="35,147,0,0" VerticalAlignment="Top" Width="80" Height="31"/>
+        <Button x:Name="bt_return" Content="Return" Visibility="Visible" Click="bt_return_Click" HorizontalAlignment="Left" Margin="126,148,0,0" VerticalAlignment="Top" Width="92" Height="30"/>
         <Label x:Name="l_eventos" Visibility="Visible" Content="Eventos"  HorizontalAlignment="Left" Margin="266,16,0,0" VerticalAlignment="Top" Width="120"/>
         <ListBox x:Name="lb_eventos"   SelectionMode="Multiple" Visibility="Visible" Margin="266,42,228,241">
             <ListBox.ItemTemplate>

@@ -116,6 +116,35 @@ namespace Calendar
 
         private void bt_delete_Click(object sender, RoutedEventArgs e)
         {
+            MessageBoxResult result = MessageBox.Show("Are you sure you want to delete?", "Confirm Deletion", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            // Process the user's response
+            if (result == MessageBoxResult.Yes)
+            {
+                // User clicked Yes, perform deletion logic
+                DeleteItem();
+            }
+            else
+            {
+                double mainWindowLeft = Left;
+                double mainWindowTop = Top;
+                double mainWindowWidth = Width;
+                double mainWindowHeight = Height;
+                WindowState mainWindowState = WindowState;
+
+                Delete_Evento eve = new Delete_Evento();
+                eve.Left = mainWindowLeft;
+                eve.Top = mainWindowTop;
+                eve.Width = mainWindowWidth;
+                eve.Height = mainWindowHeight;
+                eve.WindowState = mainWindowState;
+                eve.Show();
+                Close();
+            }
+        }
+
+        public void DeleteItem()
+        {
             if (cb_modalidade != null)
             {
                 Modalidade selectedModalidade = (Modalidade)cb_modalidade.SelectedItem;

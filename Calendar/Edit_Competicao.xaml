@@ -234,10 +234,10 @@
         <Label x:Name="l_modalidade" Content="Modalidade"  HorizontalAlignment="Left" Margin="35,16,0,0" VerticalAlignment="Top" Width="120"/>
         <ComboBox x:Name="cb_modalidade"  Visibility="Visible" HorizontalAlignment="Left" Margin="35,42,0,0" VerticalAlignment="Top" Width="183" SelectionChanged="cb_modalidade_SelectionChanged" Height="22"/>
         <Label x:Name="l_edit_competicao" Content="Nome do Evento" Visibility="Visible"  HorizontalAlignment="Left" Margin="35,64,0,0" VerticalAlignment="Top" Width="160" />
-        <Button x:Name="bt_return" Content="Return" Visibility="Visible" Click="bt_return_Click" HorizontalAlignment="Left" Margin="126,193,0,0" VerticalAlignment="Top" Width="92" Height="31"/>
-        <ComboBox x:Name="cb_edit_competicao" SelectionChanged="cb_edit_competicao_SelectionChanged"  Visibility="Visible" HorizontalAlignment="Left" Margin="35,95,0,0" VerticalAlignment="Top" Width="183" Height="19" />
-        <TextBox x:Name="tb_edit_competicao" TextWrapping="Wrap"  Visibility="Visible"  HorizontalAlignment="Left" Margin="35,119,0,0" VerticalAlignment="Top" Width="183" Height="41"/>
-        <Button x:Name="bt_edit_competicao" Content="Edit" Visibility="Visible" Click="bt_edit_competicao_Click" HorizontalAlignment="Left" Margin="35,193,0,0" VerticalAlignment="Top" Width="80" Height="31"/>
+        <Button x:Name="bt_return" Content="Return" Visibility="Visible" Click="bt_return_Click" HorizontalAlignment="Left" Margin="126,217,0,0" VerticalAlignment="Top" Width="92" Height="31"/>
+        <ComboBox x:Name="cb_edit_competicao" SelectionChanged="cb_edit_competicao_SelectionChanged"  Visibility="Visible" HorizontalAlignment="Left" Margin="35,95,0,0" VerticalAlignment="Top" Width="183" Height="23" />
+        <TextBox x:Name="tb_edit_competicao" TextWrapping="Wrap"  Visibility="Visible"  HorizontalAlignment="Left" Margin="35,133,0,0" VerticalAlignment="Top" Width="183" Height="54"/>
+        <Button x:Name="bt_edit_competicao" Content="Edit" Visibility="Visible" Click="bt_edit_competicao_Click" HorizontalAlignment="Left" Margin="35,217,0,0" VerticalAlignment="Top" Width="80" Height="31"/>
 
         <Label x:Name="l_eventos_edit" Visibility="Visible" Content="Eventos"  HorizontalAlignment="Left" Margin="280,16,0,0" VerticalAlignment="Top" Width="120"/>
         <ListBox x:Name="lb_eventos_edit"  SelectionMode="Multiple" Visibility="Visible" Margin="280,42,214,241" >
@@ -248,7 +248,7 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <Label x:Name="l_evento_edit" Visibility="Visible" Content="Eventos Nao pertecentes"  HorizontalAlignment="Left" Margin="280,196,0,0" VerticalAlignment="Top" Width="173"/>
+        <Label x:Name="l_evento_edit" Visibility="Visible" Content="Eventos Não Pertecentes"  HorizontalAlignment="Left" Margin="280,196,0,0" VerticalAlignment="Top" Width="173"/>
         <ListBox x:Name="lb_evento_edit"  SelectionMode="Multiple" Visibility="Visible" Margin="280,222,214,45" >
             <ListBox.ItemTemplate>
                 <DataTemplate>

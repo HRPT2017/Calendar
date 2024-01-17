@@ -20,6 +20,7 @@ using static System.Net.Mime.MediaTypeNames;
 using System.Collections;
 using Microsoft.Extensions.Logging;
 using System.IO;
+using Microsoft.Win32;
 
 /*
  * Author: Hugo Teixeira
@@ -261,8 +262,30 @@ namespace Calendar
 
         private void bt_ical_Click(object sender, RoutedEventArgs e)
         {
-            GenerateICalFile(@"C:\Users\hugo1\OneDrive\Ambiente de Trabalho\Hugo\FPAK.ics");
-            MessageBox.Show("ICS file generated successfully!");
+            // Create a SaveFileDialog
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Text Files (*.ics)|*.ics|All Files (*.*)|*.*";
+            saveFileDialog.Title = "Save File";
+
+            // Show the SaveFileDialog
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                // Get the selected file name and path
+                string filePath = saveFileDialog.FileName;
+
+                try
+                {
+                    // Generate the content you want to save
+                    GenerateICalFile(filePath);
+
+                    // Write the content to the selected file
+                    MessageBox.Show("File saved successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error saving file: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
         }
 
         //handles the change of size
