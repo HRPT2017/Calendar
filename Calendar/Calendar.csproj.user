@@ -7,45 +7,45 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Create_Competicao.xaml.cs">
+    <Compile Update="View Models\Create_Competicao.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Create_Evento.xaml.cs">
+    <Compile Update="View Models\Create_Evento.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Delete_Competicao.xaml.cs">
+    <Compile Update="View Models\Delete_Competicao.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Delete_Evento.xaml.cs">
+    <Compile Update="View Models\Delete_Evento.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Edit_Competicao.xaml.cs">
+    <Compile Update="View Models\Edit_Competicao.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Edit_Evento.xaml.cs">
+    <Compile Update="View Models\Edit_Evento.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Create_Competicao.xaml">
+    <Page Update="Views\Create_Competicao.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Create_Evento.xaml">
+    <Page Update="Views\Create_Evento.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Delete_Competicao.xaml">
+    <Page Update="Views\Delete_Competicao.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Delete_Evento.xaml">
+    <Page Update="Views\Delete_Evento.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Edit_Competicao.xaml">
+    <Page Update="Views\Edit_Competicao.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Edit_Evento.xaml">
+    <Page Update="Views\Edit_Evento.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MainWindow.xaml">
+    <Page Update="Views\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

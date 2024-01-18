@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\hugo1\OneDrive\Ambiente de Trabalho\Hugo\Trabalho\Calendar\Calendar\App.xaml
-7-1517434185
+7-1825259011
 
-171548082259
+17-1762976541
 230-147162610
-Create_Competicao.xaml;Create_Evento.xaml;Delete_Competicao.xaml;Delete_Evento.xaml;Edit_Competicao.xaml;Edit_Evento.xaml;MainWindow.xaml;
+Views\Create_Competicao.xaml;Views\Create_Evento.xaml;Views\Delete_Competicao.xaml;Views\Delete_Evento.xaml;Views\Edit_Competicao.xaml;Views\Edit_Evento.xaml;Views\MainWindow.xaml;
 
 False
 
