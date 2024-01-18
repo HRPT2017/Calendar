@@ -21,7 +21,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_38551B1EEEE74A50A05EACE23DA49D37"
+        "MsmKey" = "8:_1E57382E94F24898AEA0670A9F423377"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -45,7 +45,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_9F97DEA1BBED4E63A298A4A10431F396"
+        "MsmKey" = "8:_D4065291F4D24AB8B9FBF929C5D9A08A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -109,6 +109,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -140,9 +156,9 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_38551B1EEEE74A50A05EACE23DA49D37"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1E57382E94F24898AEA0670A9F423377"
             {
-            "SourcePath" = "8:..\\Calendar\\Database\\Calendar_log.ldf"
+            "SourcePath" = "8:..\\Calendar\\bin\\Debug\\net8.0-windows\\Calendar_log.ldf"
             "TargetName" = "8:Calendar_log.ldf"
             "Tag" = "8:"
             "Folder" = "8:_E646286C9F5246F0A8CB185A88F51255"
@@ -200,9 +216,9 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9F97DEA1BBED4E63A298A4A10431F396"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D4065291F4D24AB8B9FBF929C5D9A08A"
             {
-            "SourcePath" = "8:..\\Calendar\\Database\\Calendar.mdf"
+            "SourcePath" = "8:..\\Calendar\\bin\\Debug\\net8.0-windows\\Calendar.mdf"
             "TargetName" = "8:Calendar.mdf"
             "Tag" = "8:"
             "Folder" = "8:_E646286C9F5246F0A8CB185A88F51255"
@@ -290,7 +306,7 @@
         "ARPHELPLINK" = "8:"
         "Title" = "8:Setup"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:HP"
+        "ARPCONTACT" = "8:Hugo Teixeira"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"

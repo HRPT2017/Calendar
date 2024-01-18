@@ -1,13 +1,12 @@
-﻿<Window x:Class="Calendar.Create_Competicao"
+﻿<Page x:Class="Calendar.Create_Competicao"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calendar"
         mc:Ignorable="d"
-        Title="Create_Competicao" Height="450" Width="800"
-        Icon="logo.ico" Background="Black">
-    <Window.Resources>
+        Title="Create_Competicao" Height="450" Width="800" Background="Black">
+    <Page.Resources>
 
         <!-- Default resource definitions -->
         <SolidColorBrush x:Key="WindowBackgroundBrush" Color="#006cac"/>
@@ -226,7 +225,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-    </Window.Resources>
+    </Page.Resources>
 
 
     <Grid>
@@ -245,4 +244,4 @@
             </ListBox.ItemTemplate>
         </ListBox>
     </Grid>
-</Window>
+</Page>
