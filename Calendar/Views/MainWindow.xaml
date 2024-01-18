@@ -7,9 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" 
         SizeChanged="Window_SizeChanged"
-        Icon="logo.ico"
-Background="Black"
-        >
+        Icon="/Views/logo.ico"
+        Background="Black">
 
     <Window.Resources>
 
