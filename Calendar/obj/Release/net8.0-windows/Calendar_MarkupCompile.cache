@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\hugo1\OneDrive\Ambiente de Trabalho\Hugo\Trabalho\Calendar\Calendar\obj\Release\net8.0-windows\
+C:\Users\hugo1\Desktop\Calendar\Calendar\obj\Release\net8.0-windows\
 Calendar
 none
 false
 TRACE;RELEASE;NET;NET8_0;NETCOREAPP
-C:\Users\hugo1\OneDrive\Ambiente de Trabalho\Hugo\Trabalho\Calendar\Calendar\App.xaml
+C:\Users\hugo1\Desktop\Calendar\Calendar\App.xaml
 7-1825259011
-
+1-320686414
 151045625295
-230-147162610
+232104334395
 Views\Create_Competicao.xaml;Views\Create_Evento.xaml;Views\Delete_Competicao.xaml;Views\Delete_Evento.xaml;Views\Edit_Competicao.xaml;Views\Edit_Evento.xaml;Views\MainWindow.xaml;
 
-False
+True
 

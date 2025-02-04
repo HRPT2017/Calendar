@@ -1,18 +1,7 @@
 ﻿using Calendar.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 
 
@@ -165,10 +154,13 @@ namespace Calendar
                 if (cb_competicao.SelectedItem != null)
                 {
                     var competicao = context.Competicao.Find(selectedCompeticaoId);
+                    if (competicao != null)
+                    {
+                        context.Competicao.Remove(competicao);
+                        context.SaveChanges();
+                        context.Entry(competicao).State = EntityState.Detached;
+                    }
 
-                    context.Competicao.Remove(competicao);
-                    context.SaveChanges();
-                    context.Entry(competicao).State = EntityState.Detached;
                 }
             }
             else MessageBox.Show("Seleciona uma modalidade");

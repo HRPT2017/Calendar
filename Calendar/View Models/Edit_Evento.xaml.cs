@@ -1,29 +1,7 @@
-﻿                                                   using Calendar.Models;
+﻿using Calendar.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Calendar.Models;
-using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using Microsoft.EntityFrameworkCore;
-using static System.Net.Mime.MediaTypeNames;
-using System.Collections;
 
 
 
@@ -120,10 +98,10 @@ namespace Calendar
                     //check if the Data is not null
                     if (dp_data_edit.SelectedDate != null || dp_data_edit.Text != null)
                     {
-                        Evento eventos = context.Evento.FirstOrDefault(c => c.Id == selectedEventoId);
+                        Evento eventos = context.Evento.First(c => c.Id == selectedEventoId);
 
                         eventos.Nome = result;
-                        eventos.Data = (DateTime)dp_data_edit.SelectedDate;
+                        eventos.Data = (DateTime)dp_data_edit.SelectedDate.GetValueOrDefault( );
 
                         context.Update(eventos);
                         context.SaveChanges();
@@ -162,6 +140,7 @@ namespace Calendar
                         {
                             Evento_Id = selectedEventoId,
                             Competicao_Id = selectedId
+
                         };
 
                         context.JunctionTable.Add(jt);
@@ -204,7 +183,7 @@ namespace Calendar
                 int selectedEventoId = selectedEvento.Id;
 
 
-                Evento eventos = context.Evento.FirstOrDefault(c => c.Id == selectedEventoId);
+                Evento eventos = context.Evento.First(c => c.Id == selectedEventoId);
 
                 tb_edit_evento.Text = eventos.Nome;
 

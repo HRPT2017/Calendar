@@ -1,18 +1,7 @@
 ﻿using Calendar.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 
 namespace Calendar
@@ -74,9 +63,15 @@ namespace Calendar
 
         }
 
+        private DataContext GetContext()
+        {
+            return context;
+        }
 
         private void cb_evento_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            var context = (DataContext)DataContext;  // Defina o contexto de dados aqui, se necessário
+
             if (cb_evento.SelectedItem != null)
             {
                 Modalidade selectedModalidade = (Modalidade)cb_modalidade.SelectedItem;
@@ -85,9 +80,7 @@ namespace Calendar
                 Evento selectedEvento = (Evento)cb_evento.SelectedItem;
                 int selectedEventoId = selectedEvento.Id;
 
-
-                Evento eventos = context.Evento.FirstOrDefault(c => c.Id == selectedEventoId);
-
+                Evento eventos = context.Evento.First(c => c.Id == selectedEventoId);
 
                 tb_data.Text = eventos.Data.ToString();
 
@@ -102,18 +95,13 @@ namespace Calendar
                                  select e2;
 
                     lb_competicoes.ItemsSource = result.ToList();
-
-
-
                 }
                 else
                 {
                     lb_competicoes.ItemsSource = null;
                 }
-
             }
         }
-
         private void bt_delete_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show("Are you sure you want to delete?", "Confirm Deletion", MessageBoxButton.YesNo, MessageBoxImage.Question);
@@ -164,10 +152,12 @@ namespace Calendar
                 if (cb_evento.SelectedItem != null)
                 {
                     var evento = context.Evento.Find(selectedEventoId);
-
-                    context.Evento.Remove(evento);
-                    context.SaveChanges();
-                    context.Entry(evento).State = EntityState.Detached;
+                    if (evento != null)
+                    {
+                        context.Evento.Remove(evento);
+                        context.SaveChanges();
+                        context.Entry(evento).State = EntityState.Detached;
+                    }
                 }
             }
             else MessageBox.Show("Seleciona uma modalidade");
