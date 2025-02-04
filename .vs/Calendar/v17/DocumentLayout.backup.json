@@ -66,20 +66,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Create_Competicao.xaml",
-              "DocumentMoniker": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\Views\\Create_Competicao.xaml",
-              "RelativeDocumentMoniker": "Calendar\\Views\\Create_Competicao.xaml",
-              "ToolTip": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\Views\\Create_Competicao.xaml",
-              "RelativeToolTip": "Calendar\\Views\\Create_Competicao.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-04T11:43:41.869Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -90,6 +78,31 @@
               "RelativeToolTip": "Calendar\\Views\\Delete_Evento.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-02-04T10:54:32.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create_Competicao.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\View Models\\Create_Competicao.xaml.cs",
+              "RelativeDocumentMoniker": "Calendar\\View Models\\Create_Competicao.xaml.cs",
+              "ToolTip": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\View Models\\Create_Competicao.xaml.cs",
+              "RelativeToolTip": "Calendar\\View Models\\Create_Competicao.xaml.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAjwFYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T10:56:50.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Create_Competicao.xaml",
+              "DocumentMoniker": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\Views\\Create_Competicao.xaml",
+              "RelativeDocumentMoniker": "Calendar\\Views\\Create_Competicao.xaml",
+              "ToolTip": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\Views\\Create_Competicao.xaml",
+              "RelativeToolTip": "Calendar\\Views\\Create_Competicao.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-04T11:43:41.869Z",
               "EditorCaption": ""
             },
             {
@@ -116,19 +129,6 @@
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-02-04T11:08:43.782Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Create_Competicao.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\View Models\\Create_Competicao.xaml.cs",
-              "RelativeDocumentMoniker": "Calendar\\View Models\\Create_Competicao.xaml.cs",
-              "ToolTip": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\View Models\\Create_Competicao.xaml.cs",
-              "RelativeToolTip": "Calendar\\View Models\\Create_Competicao.xaml.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAjwFYAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T10:56:50.989Z",
               "EditorCaption": ""
             },
             {
