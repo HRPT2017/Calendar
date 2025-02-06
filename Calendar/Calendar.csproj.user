@@ -9,42 +9,42 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="View Models\Create_Competicao.xaml.cs">
+    <Compile Update="View Models\Competition\createCompetition.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View Models\Create_Evento.xaml.cs">
+    <Compile Update="View Models\Event\createEvent.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View Models\Delete_Competicao.xaml.cs">
+    <Compile Update="View Models\Competition\deleteCompetition.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View Models\Delete_Evento.xaml.cs">
+    <Compile Update="View Models\Event\deleteEvent.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View Models\Edit_Competicao.xaml.cs">
+    <Compile Update="View Models\Competition\editCompetition.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View Models\Edit_Evento.xaml.cs">
+    <Compile Update="View Models\Event\editEvent.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Views\Create_Competicao.xaml">
+    <Page Update="Views\Competition\createCompetition.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Create_Evento.xaml">
+    <Page Update="Views\Event\createEvent.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Delete_Competicao.xaml">
+    <Page Update="Views\Competition\deleteCompetition.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Delete_Evento.xaml">
+    <Page Update="Views\Event\deleteEvent.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Edit_Competicao.xaml">
+    <Page Update="Views\Competition\editCompetition.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Edit_Evento.xaml">
+    <Page Update="Views\Event\editEvent.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\MainWindow.xaml">

@@ -3,6 +3,12 @@ using System.Windows;
 using System.Windows.Controls;
 using System.IO;
 using Microsoft.Win32;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Windows.Input;
+using CommunityToolkit.Mvvm.Input;
+using System.Diagnostics;
+using Calendar.Database;
 
 /*
  * Author: Hugo Teixeira
@@ -15,79 +21,93 @@ namespace Calendar
     {
         DataContext context = new DataContext();
 
+        private readonly ScraperService scraperService;
+        private string? scrapedData;
+
+        public string ScrapedData
+        {
+            get => scrapedData ?? "";
+            set { scrapedData = value; OnPropertyChanged(); }
+        }
+
+        public IRelayCommand ScrapeCommand { get; }
+
         public MainWindow()
         {
             InitializeComponent();
 
-            LoadModalidade();
+            LoadModality();
 
-            LoadCompeticao();
+            LoadCompetition();
+
+            scraperService = new ScraperService() ;
+            ScrapeCommand = new RelayCommand(async () => await ScrapeWebsite());
         }
 
-        public void LoadModalidade()
+        public void LoadModality()
         {
-            List<Modalidade> nome = context.Modalidade.ToList();
-            cb_modalidade.ItemsSource = nome;
-            cb_modalidade.DisplayMemberPath = "Nome";
-
-        }
-
-        public void LoadCompeticao()
-        {
-            List<Competicao> nome = context.Competicao.ToList();
-            cb_competicao.ItemsSource = nome;
-            cb_competicao.DisplayMemberPath = "Nome";
+            List<Modality> name = context.Modalities.ToList();
+            cb_modality.ItemsSource = name;
+            cb_modality.DisplayMemberPath = "Name";
 
         }
 
-        private void cb_modalidade_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        public void LoadCompetition()
         {
-            if(cb_modalidade.SelectedItem != null)
+            List<Competition> name = context.Competitions.ToList();
+            cb_competition.ItemsSource = name;
+            cb_competition.DisplayMemberPath = "Name";
+
+        }
+
+        private void cb_modality_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(cb_modality.SelectedItem != null)
             {
-                Modalidade selectedModalidade = (Modalidade)cb_modalidade.SelectedItem;
-                int selectedModalidadeId = selectedModalidade.Id;
+                Modality selectedModality = (Modality)cb_modality.SelectedItem;
+                int selectedModalityId = selectedModality.id;
 
-                var competicoes = context.Competicao.Where(c => c.Modalidade_Id == selectedModalidadeId).ToList();
-                cb_competicao.ItemsSource = competicoes;
-                cb_competicao.DisplayMemberPath = "Nome";
+                var competitions = context.Competitions.Where(c => c.modalityId == selectedModalityId).ToList();
+                cb_competition.ItemsSource = competitions;
+                cb_competition.DisplayMemberPath = "Name";
 
 
-                var eventos = context.Evento.Where(c => c.Modalidade_Id == selectedModalidadeId).ToList();
-                lb_eventos.ItemsSource = eventos;
+                var events = context.Competitions.Where(c => c.modalityId == selectedModalityId).ToList();
+                lb_events.ItemsSource = events;
 
 
             }
 
         }
 
-        private void cb_competicao_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void cb_competition_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (cb_competicao.SelectedItem != null)
+            if (cb_competition.SelectedItem != null)
             {
-                Competicao selectedCompeticao = (Competicao)cb_competicao.SelectedItem;
-                int selectedCompeticaoId = selectedCompeticao.Id;
+                Competition selectedCompetition = (Competition)cb_competition.SelectedItem;
+                int selectedCompetitionId = selectedCompetition.id;
 
                 
-                List<int> evento = context.JunctionTable.Select(c => c.Competicao_Id).ToList();
+                List<int> event_ = context.EventsCompetitions.Select(c => c.competitionId).ToList();
 
 
-                if(evento.Contains(selectedCompeticaoId))
+                if(event_.Contains(selectedCompetitionId))
                 {
-                    var result = from e1 in context.Competicao
-                                 join junction in context.JunctionTable on e1.Id equals junction.Competicao_Id
-                                 join e2 in context.Evento on junction.Evento_Id equals e2.Id
-                                 where e1.Id == selectedCompeticaoId
+                    var result = from e1 in context.Competitions
+                                 join junction in context.EventsCompetitions on e1.id equals junction.competitionId
+                                 join e2 in context.Events on junction.eventId equals e2.id
+                                 where e1.id == selectedCompetitionId
                                  select new
                                  { 
-                                    Nome= e2.Nome,
-                                     Data = e2.Data.ToString("dd/MM/yyyy")
+                                    Nome= e2.name,
+                                     Data = e2.startDate.ToString("dd/MM/yyyy")
                                  };
 
-                    lb_eventos.ItemsSource = result.ToList();
+                    lb_events.ItemsSource = result.ToList();
                 }
                 else 
                 {
-                    lb_eventos.ItemsSource = null;
+                    lb_events.ItemsSource = null;
                 }
 
 
@@ -95,7 +115,7 @@ namespace Calendar
 
         }
 
-        private void bt_create_competicao_Click(object sender, RoutedEventArgs e)
+        private void bt_create_competition_Click(object sender, RoutedEventArgs e)
         {
             double mainWindowLeft = Left;
             double mainWindowTop = Top;
@@ -103,7 +123,7 @@ namespace Calendar
             double mainWindowHeight = Height;
             WindowState mainWindowState = WindowState;
 
-            Create_Competicao competicao = new Create_Competicao();
+            CreateCompetition competicao = new CreateCompetition();
             competicao.Left = mainWindowLeft;
             competicao.Top = mainWindowTop;
             competicao.Width = mainWindowWidth;
@@ -113,7 +133,7 @@ namespace Calendar
             Close();
         }
 
-        private void bt_create_evento_Click(object sender, RoutedEventArgs e)
+        private void bt_create_event_Click(object sender, RoutedEventArgs e)
         {
             double mainWindowLeft = Left;
             double mainWindowTop = Top;
@@ -121,7 +141,7 @@ namespace Calendar
             double mainWindowHeight = Height;
             WindowState mainWindowState = WindowState;
 
-            Create_Evento evento = new Create_Evento();
+            CreateEvent evento = new CreateEvent();
             evento.Left = mainWindowLeft;
             evento.Top = mainWindowTop;
             evento.Width = mainWindowWidth;
@@ -131,7 +151,7 @@ namespace Calendar
             Close();
         }
 
-        private void bt_edit_menu_evento_Click(object sender, RoutedEventArgs e)
+        private void bt_edit_menu_event_Click(object sender, RoutedEventArgs e)
         {
             double mainWindowLeft = Left;
             double mainWindowTop = Top;
@@ -139,7 +159,7 @@ namespace Calendar
             double mainWindowHeight = Height;
             WindowState mainWindowState = WindowState;
 
-            Edit_Evento evento = new Edit_Evento();
+            EditEvent evento = new EditEvent();
             evento.Left = mainWindowLeft;
             evento.Top = mainWindowTop;
             evento.Width = mainWindowWidth;
@@ -150,7 +170,7 @@ namespace Calendar
 
         }
 
-        private void bt_edit_menu_competicao_Click(object sender, RoutedEventArgs e)
+        private void bt_edit_menu_competition_Click(object sender, RoutedEventArgs e)
         {
             double mainWindowLeft = Left;
             double mainWindowTop = Top;
@@ -158,7 +178,7 @@ namespace Calendar
             double mainWindowHeight = Height;
             WindowState mainWindowState = WindowState;
 
-            Edit_Competicao competicao = new Edit_Competicao();
+            EditCompetition competicao = new EditCompetition();
             competicao.Left = mainWindowLeft;
             competicao.Top = mainWindowTop;
             competicao.Width = mainWindowWidth;
@@ -168,7 +188,7 @@ namespace Calendar
             Close();
         }
 
-        private void bt_remove_menu_evento_Click(object sender, RoutedEventArgs e)
+        private void bt_remove_menu_event_Click(object sender, RoutedEventArgs e)
         {
             double mainWindowLeft = Left;
             double mainWindowTop = Top;
@@ -176,7 +196,7 @@ namespace Calendar
             double mainWindowHeight = Height;
             WindowState mainWindowState = WindowState;
 
-            Delete_Evento evento = new Delete_Evento();
+            DeleteEvent evento = new DeleteEvent();
             evento.Left = mainWindowLeft;
             evento.Top = mainWindowTop;
             evento.Width = mainWindowWidth;
@@ -186,7 +206,7 @@ namespace Calendar
             Close();
         }
 
-        private void bt_delete_competicao_Click(object sender, RoutedEventArgs e)
+        private void bt_delete_competition_Click(object sender, RoutedEventArgs e)
         {
             double mainWindowLeft = Left;
             double mainWindowTop = Top;
@@ -194,7 +214,7 @@ namespace Calendar
             double mainWindowHeight = Height;
             WindowState mainWindowState = WindowState;
 
-            Delete_Competicao competicao = new Delete_Competicao();
+            DeleteCompetition competicao = new DeleteCompetition();
             competicao.Left = mainWindowLeft;
             competicao.Top = mainWindowTop;
             competicao.Width = mainWindowWidth;
@@ -208,15 +228,16 @@ namespace Calendar
         public void GenerateICalFile(string filePath)
         {
             //Gets nome from both Competicao and Evento through the junctiontable and also the data 
-            var events = from e1 in context.Competicao
-                         join junction in context.JunctionTable on e1.Id equals junction.Competicao_Id
-                         join e2 in context.Evento on junction.Evento_Id equals e2.Id
+            var events = from e1 in context.Competitions
+                         join junction in context.EventsCompetitions on e1.id equals junction.competitionId
+                         join e2 in context.Events on junction.eventId equals e2.id
                          select new
                          {
-                             Nome = e2.Nome,
-                             Nome2 = e1.Nome,
-                             Data = e2.Data.ToString("yyyyMMdd")
-                         };
+                             eventName = e2.name,
+                             competitionName = e1.name,
+                             startDate = e2.startDate.ToString("yyyyMMdd"),
+                             endDate = e2.endDate.HasValue ? e2.endDate.Value.ToString("yyyyMMdd") : e2.startDate.ToString("yyyyMMdd")
+        };
 
             //Create the file using the previous values
             using (var fs = new FileStream(filePath, FileMode.Create, FileAccess.Write))
@@ -230,9 +251,9 @@ namespace Calendar
                 foreach (var calendarEvent in events)
                 {
                     writer.WriteLine("BEGIN:VEVENT");
-                    writer.WriteLine($"SUMMARY:{calendarEvent.Nome2} - {calendarEvent.Nome}");
-                    writer.WriteLine($"DTSTART:{calendarEvent.Data:yyyyMMdd}");
-
+                    writer.WriteLine($"SUMMARY:{calendarEvent.competitionName} - {calendarEvent.eventName}");
+                    writer.WriteLine($"DTSTART:{calendarEvent.startDate:yyyyMMdd}");
+                    writer.WriteLine($"DTEND:{calendarEvent.endDate:yyyyMMdd}");
                     writer.WriteLine("END:VEVENT");
                 }
 
@@ -275,12 +296,26 @@ namespace Calendar
         {
             if (WindowState == WindowState.Maximized)
             {
-                lb_eventos.Margin = new Thickness(35, 169, 1105, 80);
+                lb_events.Margin = new Thickness(35, 169, 1105, 80);
             }
             else
             {
-                lb_eventos.Margin = new Thickness(35, 169, 439, 80);
+                lb_events.Margin = new Thickness(35, 169, 439, 80);
             }
+        }
+
+        private void btScrapeWebsite(object sender, RoutedEventArgs e) => ScrapeWebsite();
+
+        private async Task ScrapeWebsite()
+        {
+            ScrapedData = "Loading...";
+            ScrapedData = await scraperService.ScrapeDataAsync("https://www.fpak.pt/calendario?d=now");
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged([CallerMemberName] string? propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

@@ -3,60 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\hugo1\\Desktop\\Calendar\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|c:\\users\\hugo1\\desktop\\calendar\\calendar\\view models\\create_competicao.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|solutionrelative:calendar\\view models\\create_competicao.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|c:\\users\\hugo1\\desktop\\calendar\\calendar\\views\\create_competicao.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|solutionrelative:calendar\\views\\create_competicao.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|c:\\users\\hugo1\\desktop\\calendar\\calendar\\views\\delete_evento.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|solutionrelative:calendar\\views\\delete_evento.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|c:\\users\\hugo1\\desktop\\calendar\\calendar\\view models\\delete_evento.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|solutionrelative:calendar\\view models\\delete_evento.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|c:\\users\\hugo1\\desktop\\calendar\\calendar\\view models\\edit_competicao.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|solutionrelative:calendar\\view models\\edit_competicao.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|c:\\users\\hugo1\\desktop\\calendar\\calendar\\calendar.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|solutionrelative:calendar\\calendar.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|c:\\users\\hugo1\\desktop\\calendar\\calendar\\view models\\create_evento.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|solutionrelative:calendar\\view models\\create_evento.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|c:\\users\\hugo1\\desktop\\calendar\\calendar\\models\\evento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|solutionrelative:calendar\\models\\evento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|c:\\users\\hugo1\\desktop\\calendar\\calendar\\models\\competicao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|solutionrelative:calendar\\models\\competicao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|c:\\users\\hugo1\\desktop\\calendar\\calendar\\view models\\edit_evento.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|solutionrelative:calendar\\view models\\edit_evento.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|c:\\users\\hugo1\\desktop\\calendar\\calendar\\models\\junctiontable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|solutionrelative:calendar\\models\\junctiontable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|c:\\users\\hugo1\\desktop\\calendar\\calendar\\view models\\delete_competicao.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|solutionrelative:calendar\\view models\\delete_competicao.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|c:\\users\\hugo1\\desktop\\calendar\\calendar\\models\\modalidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|solutionrelative:calendar\\models\\modalidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|c:\\users\\hugo1\\desktop\\calendar\\calendar\\view models\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|solutionrelative:calendar\\view models\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|c:\\users\\hugo1\\desktop\\calendar\\calendar\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|solutionrelative:calendar\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|c:\\users\\hugo1\\desktop\\calendar\\calendar\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|solutionrelative:calendar\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|c:\\users\\hugo1\\desktop\\calendar\\calendar\\view models\\competition\\createcompetition.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|solutionrelative:calendar\\view models\\competition\\createcompetition.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|c:\\users\\hugo1\\desktop\\calendar\\calendar\\view models\\competition\\deletecompetition.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66F0A639-5524-4BB4-A931-22538C7E0F0F}|Calendar\\Calendar.csproj|solutionrelative:calendar\\view models\\competition\\deletecompetition.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,186 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Delete_Evento.xaml",
-              "DocumentMoniker": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\Views\\Delete_Evento.xaml",
-              "RelativeDocumentMoniker": "Calendar\\Views\\Delete_Evento.xaml",
-              "ToolTip": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\Views\\Delete_Evento.xaml",
-              "RelativeToolTip": "Calendar\\Views\\Delete_Evento.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-04T10:54:32.195Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Create_Competicao.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\View Models\\Create_Competicao.xaml.cs",
-              "RelativeDocumentMoniker": "Calendar\\View Models\\Create_Competicao.xaml.cs",
-              "ToolTip": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\View Models\\Create_Competicao.xaml.cs",
-              "RelativeToolTip": "Calendar\\View Models\\Create_Competicao.xaml.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAjwFYAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T10:56:50.989Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Create_Competicao.xaml",
-              "DocumentMoniker": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\Views\\Create_Competicao.xaml",
-              "RelativeDocumentMoniker": "Calendar\\Views\\Create_Competicao.xaml",
-              "ToolTip": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\Views\\Create_Competicao.xaml",
-              "RelativeToolTip": "Calendar\\Views\\Create_Competicao.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-04T11:43:41.869Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Delete_Evento.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\View Models\\Delete_Evento.xaml.cs",
-              "RelativeDocumentMoniker": "Calendar\\View Models\\Delete_Evento.xaml.cs",
-              "ToolTip": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\View Models\\Delete_Evento.xaml.cs",
-              "RelativeToolTip": "Calendar\\View Models\\Delete_Evento.xaml.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAYwIgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T10:56:29.777Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Calendar",
-              "DocumentMoniker": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\Calendar.csproj",
-              "RelativeDocumentMoniker": "Calendar\\Calendar.csproj",
-              "ToolTip": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\Calendar.csproj",
-              "RelativeToolTip": "Calendar\\Calendar.csproj",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-04T11:08:43.782Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Edit_Competicao.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\View Models\\Edit_Competicao.xaml.cs",
-              "RelativeDocumentMoniker": "Calendar\\View Models\\Edit_Competicao.xaml.cs",
-              "ToolTip": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\View Models\\Edit_Competicao.xaml.cs",
-              "RelativeToolTip": "Calendar\\View Models\\Edit_Competicao.xaml.cs",
-              "ViewState": "AgIAAHEAAAAAAAAAAAAjwHgAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T10:56:25.39Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Create_Evento.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\View Models\\Create_Evento.xaml.cs",
-              "RelativeDocumentMoniker": "Calendar\\View Models\\Create_Evento.xaml.cs",
-              "ToolTip": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\View Models\\Create_Evento.xaml.cs",
-              "RelativeToolTip": "Calendar\\View Models\\Create_Evento.xaml.cs",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAjwFEAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T10:56:45.302Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Evento.cs",
-              "DocumentMoniker": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\Models\\Evento.cs",
-              "RelativeDocumentMoniker": "Calendar\\Models\\Evento.cs",
-              "ToolTip": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\Models\\Evento.cs",
-              "RelativeToolTip": "Calendar\\Models\\Evento.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAiwBMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T10:57:30.889Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Edit_Evento.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\View Models\\Edit_Evento.xaml.cs",
-              "RelativeDocumentMoniker": "Calendar\\View Models\\Edit_Evento.xaml.cs",
-              "ToolTip": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\View Models\\Edit_Evento.xaml.cs",
-              "RelativeToolTip": "Calendar\\View Models\\Edit_Evento.xaml.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAjwGcAAABfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T10:56:10.276Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Competicao.cs",
-              "DocumentMoniker": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\Models\\Competicao.cs",
-              "RelativeDocumentMoniker": "Calendar\\Models\\Competicao.cs",
-              "ToolTip": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\Models\\Competicao.cs",
-              "RelativeToolTip": "Calendar\\Models\\Competicao.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAswBAAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T10:57:24.424Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "JunctionTable.cs",
-              "DocumentMoniker": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\Models\\JunctionTable.cs",
-              "RelativeDocumentMoniker": "Calendar\\Models\\JunctionTable.cs",
-              "ToolTip": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\Models\\JunctionTable.cs",
-              "RelativeToolTip": "Calendar\\Models\\JunctionTable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAwwAcAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T10:57:41.022Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Delete_Competicao.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\View Models\\Delete_Competicao.xaml.cs",
-              "RelativeDocumentMoniker": "Calendar\\View Models\\Delete_Competicao.xaml.cs",
-              "ToolTip": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\View Models\\Delete_Competicao.xaml.cs",
-              "RelativeToolTip": "Calendar\\View Models\\Delete_Competicao.xaml.cs",
-              "ViewState": "AgIAAI8AAAAAAAAAAAApwKEAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T10:56:33.877Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Modalidade.cs",
-              "DocumentMoniker": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\Models\\Modalidade.cs",
-              "RelativeDocumentMoniker": "Calendar\\Models\\Modalidade.cs",
-              "ToolTip": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\Models\\Modalidade.cs",
-              "RelativeToolTip": "Calendar\\Models\\Modalidade.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T10:55:48.935Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\View Models\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Calendar\\View Models\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\View Models\\MainWindow.xaml.cs",
               "RelativeToolTip": "Calendar\\View Models\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAewEAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-04T10:56:57.601Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\Views\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Calendar\\Views\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\Views\\MainWindow.xaml",
+              "RelativeToolTip": "Calendar\\Views\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-06T16:20:50.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Event.cs",
+              "DocumentMoniker": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\Models\\Event.cs",
+              "RelativeDocumentMoniker": "Calendar\\Models\\Event.cs",
+              "ToolTip": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\Models\\Event.cs",
+              "RelativeToolTip": "Calendar\\Models\\Event.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T16:18:34.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "createCompetition.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\View Models\\Competition\\createCompetition.xaml.cs",
+              "RelativeDocumentMoniker": "Calendar\\View Models\\Competition\\createCompetition.xaml.cs",
+              "ToolTip": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\View Models\\Competition\\createCompetition.xaml.cs",
+              "RelativeToolTip": "Calendar\\View Models\\Competition\\createCompetition.xaml.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAcwHEAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T16:07:16.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "deleteCompetition.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\View Models\\Competition\\deleteCompetition.xaml.cs",
+              "RelativeDocumentMoniker": "Calendar\\View Models\\Competition\\deleteCompetition.xaml.cs",
+              "ToolTip": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\View Models\\Competition\\deleteCompetition.xaml.cs",
+              "RelativeToolTip": "Calendar\\View Models\\Competition\\deleteCompetition.xaml.cs",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAmwKEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T16:04:34.621Z",
               "EditorCaption": ""
             }
           ]

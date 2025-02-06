@@ -1,16 +1,9 @@
 ﻿using Calendar.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Calendar
+namespace Calendar.Database
 {
+
     public class DataContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder opitionsBuilder)
@@ -20,36 +13,36 @@ namespace Calendar
 
             opitionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB; AttachDbFilename =|DataDirectory|\\Calendar.mdf; Integrated Security = True");
         }
-        public DbSet<Modalidade> Modalidade { get; set; }
-        public DbSet<Competicao> Competicao { get; set; }
-        public DbSet<Evento> Evento { get; set; }
-        public DbSet<JunctionTable> JunctionTable { get; set; }
+        public DbSet<Modality> Modalities { get; set; }
+        public DbSet<Competition> Competitions { get; set; }
+        public DbSet<Event> Events { get; set; }
+        public DbSet<EventCompetition> EventsCompetitions { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Configure relationships here
-            modelBuilder.Entity<Competicao>()
-                .HasOne(c => c.Modalidade)
-                .WithMany(m => m.Competicao)
-                .HasForeignKey(c => c.Modalidade_Id);
+            modelBuilder.Entity<Competition>()
+                .HasOne(c => c.modality)
+                .WithMany(m => m.competition)
+                .HasForeignKey(c => c.modalityId);
 
-            modelBuilder.Entity<Evento>()
-                .HasOne(e => e.Modalidade)
-                .WithMany(c => c.Evento)
-                .HasForeignKey(e => e.Modalidade_Id);
+            modelBuilder.Entity<Event>()
+                .HasOne(e => e.modality)
+                .WithMany(c => c.events)
+                .HasForeignKey(e => e.modalityId);
 
-            modelBuilder.Entity<JunctionTable>()
-                        .HasKey(j => new { j.Competicao_Id, j.Evento_Id });
+            modelBuilder.Entity<EventCompetition>()
+                        .HasKey(j => new { j.competitionId, j.eventId });
 
-            modelBuilder.Entity<JunctionTable>()
-                        .HasOne(t => t.Evento)
-                        .WithMany(j => j.JunctionTable)
-                        .HasForeignKey(j => j.Evento_Id);
+            modelBuilder.Entity<EventCompetition>()
+                        .HasOne(t => t.events)
+                        .WithMany(j => j.eventConpetition)
+                        .HasForeignKey(j => j.eventId);
 
-            modelBuilder.Entity<JunctionTable>()
-                        .HasOne(t => t.Competicao)
-                        .WithMany(j => j.JunctionTable)
-                        .HasForeignKey(j => j.Competicao_Id);
+            modelBuilder.Entity<EventCompetition>()
+                        .HasOne(t => t.competition)
+                        .WithMany(j => j.eventCompetition)
+                        .HasForeignKey(j => j.competitionId);
 
 
 
