@@ -38,10 +38,10 @@ namespace Calendar
 
         public void LoadModality()
         {
-            List<Modality> name = context.Modalities.ToList();
+            List<Modality> name = context.Modality.ToList();
             cb_modality.ItemsSource = name;
-            cb_modality.DisplayMemberPath = "Name";
-
+            cb_modality.DisplayMemberPath = "name";
+                
 
         }
 
@@ -52,10 +52,10 @@ namespace Calendar
                 Modality selectedModality = (Modality)cb_modality.SelectedItem;
                 int selectedModalityId = selectedModality.id;
 
-                var competitions = context.Competitions.Where(c => c.modalityId == selectedModalityId).ToList();
+                var competitions = context.Competition.Where(c => c.modalityId == selectedModalityId).ToList();
                 lb_competitions.ItemsSource = competitions;
 
-                var events = context.Competitions.Where(c => c.modalityId == selectedModalityId).ToList();
+                var events = context.Competition.Where(c => c.modalityId == selectedModalityId).ToList();
                 cb_event.ItemsSource = events;
                 cb_event.DisplayMemberPath = "Name";
 
@@ -82,18 +82,18 @@ namespace Calendar
                 Event selectedEvent = (Event)cb_event.SelectedItem;
                 int selectedEventId = selectedEvent.id;
 
-                Event events = context.Events.First(c => c.id == selectedEventId);
+                Event events = context.Event.First(c => c.id == selectedEventId);
 
                 tb_start_date.Text = events.startDate.ToString();
                 tb_end_date.Text= events.endDate.ToString();
 
-                List<int> comp = context.EventsCompetitions.Select(c => c.eventId).ToList();
+                List<int> comp = context.EventCompetition.Select(c => c.eventId).ToList();
 
                 if (comp.Contains(selectedEventId))
                 {
-                    var result = from e1 in context.Events
-                                 join junction in context.EventsCompetitions on e1.id equals junction.eventId
-                                 join e2 in context.Competitions on junction.competitionId equals e2.id
+                    var result = from e1 in context.Event
+                                 join junction in context.EventCompetition on e1.id equals junction.eventId
+                                 join e2 in context.Competition on junction.competitionId equals e2.id
                                  where e1.id == selectedEventId
                                  select e2;
 
@@ -144,20 +144,20 @@ namespace Calendar
                 Event selectedEvent = (Event)cb_event.SelectedItem;
                 int selectedEventId = selectedEvent.id;
 
-                var selectedIds = context.EventsCompetitions.Where(c => c.eventId == selectedEventId).ToList();
+                var selectedIds = context.EventCompetition.Where(c => c.eventId == selectedEventId).ToList();
 
                 if (selectedIds.Any())
                 {
-                    context.EventsCompetitions.RemoveRange(selectedIds);
+                    context.EventCompetition.RemoveRange(selectedIds);
                     context.SaveChanges();
                 }
 
                 if (cb_event.SelectedItem != null)
                 {
-                    var event_ = context.Events.Find(selectedEventId);
+                    var event_ = context.Event.Find(selectedEventId);
                     if (event_ != null)
                     {
-                        context.Events.Remove(event_);
+                        context.Event.Remove(event_);
                         context.SaveChanges();
                         context.Entry(event_).State = EntityState.Detached;
                     }

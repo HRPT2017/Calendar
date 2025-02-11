@@ -1,7 +1,10 @@
-﻿namespace Calendar.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Calendar.Models
 {
     public class Modality
     {
+        [Key]
         public int id { get; set; }
         public  required string name { get; set; }
 

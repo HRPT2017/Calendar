@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Edit_Competicao" Height="450" Width="800"
         SizeChanged="Window_SizeChanged"
-        Icon="logo.ico" Background="Black">
+         Background="Black">
     <Window.Resources>
 
         <!-- Default resource definitions -->
@@ -233,7 +233,7 @@
         <!--Edit Competicao-->
         <Label x:Name="l_modality" Content="Modality"  HorizontalAlignment="Left" Margin="35,16,0,0" VerticalAlignment="Top" Width="120"/>
         <ComboBox x:Name="cb_modality"  Visibility="Visible" HorizontalAlignment="Left" Margin="35,42,0,0" VerticalAlignment="Top" Width="183" SelectionChanged="cb_modality_SelectionChanged" Height="22"/>
-        <Label x:Name="l_edit_competition" Content="Event Name" Visibility="Visible"  HorizontalAlignment="Left" Margin="35,64,0,0" VerticalAlignment="Top" Width="160" />
+        <Label x:Name="l_edit_competition" Content="Competition Name" Visibility="Visible"  HorizontalAlignment="Left" Margin="35,64,0,0" VerticalAlignment="Top" Width="160" />
         <Button x:Name="bt_return" Content="Return" Visibility="Visible" Click="bt_return_Click" HorizontalAlignment="Left" Margin="126,217,0,0" VerticalAlignment="Top" Width="92" Height="31"/>
         <ComboBox x:Name="cb_edit_competition" SelectionChanged="cb_edit_competition_SelectionChanged"  Visibility="Visible" HorizontalAlignment="Left" Margin="35,95,0,0" VerticalAlignment="Top" Width="183" Height="23" />
         <TextBox x:Name="tb_edit_competition" TextWrapping="Wrap"  Visibility="Visible"  HorizontalAlignment="Left" Margin="35,133,0,0" VerticalAlignment="Top" Width="183" Height="54"/>
@@ -243,7 +243,7 @@
         <ListBox x:Name="lb_events_edit"  SelectionMode="Multiple" Visibility="Visible" Margin="280,42,214,241" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <TextBlock Text="{Binding Name}" FontWeight="Bold" />
+                    <TextBlock Text="{Binding name}" FontWeight="Bold" />
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>

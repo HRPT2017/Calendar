@@ -46,9 +46,9 @@ namespace Calendar
         //Load the values from the databse into the Combobox
         public void LoadModality()
         {
-            List<Modality> nome = context.Modalities.ToList();
+            List<Modality> nome = context.Modality.ToList();
             cb_modality.ItemsSource = nome;
-            cb_modality.DisplayMemberPath = "Name";
+            cb_modality.DisplayMemberPath = "name";
 
 
         }
@@ -62,10 +62,10 @@ namespace Calendar
                 Modality selectedModality= (Modality)cb_modality.SelectedItem;
                 int selectedModalityId = selectedModality.id;
 
-                var competitions = context.Events.Where(c => c.modalityId == selectedModalityId).ToList();
+                var competitions = context.Event.Where(c => c.modalityId == selectedModalityId).ToList();
                 lb_competitions.ItemsSource = competitions;
 
-                var events = context.Events.Where(c => c.modalityId == selectedModalityId).ToList();
+                var events = context.Event.Where(c => c.modalityId == selectedModalityId).ToList();
                 cb_edit_event.ItemsSource = events;
                 cb_edit_event.DisplayMemberPath = "Name";
 
@@ -93,7 +93,7 @@ namespace Calendar
                 string aux = tb_edit_event.Text.ToString();
                 //Starts reading after the first character
                 string result = aux.TrimStart();
-                List<string> ev = context.Events.Select(c => c.name).ToList();
+                List<string> ev = context.Event.Select(c => c.name).ToList();
                 
                 //Checks if Nome is not null
                 if (!string.IsNullOrEmpty(aux))
@@ -101,7 +101,7 @@ namespace Calendar
                     //check if the Data is not null
                     if (dp_start_date_edit.SelectedDate != null || dp_start_date_edit.Text != null)
                     {
-                        Event events = context.Events.First(c => c.id == selectedEventId);
+                        Event events = context.Event.First(c => c.id == selectedEventId);
 
                         events.name = result;
                         events.startDate = (DateTime)dp_start_date_edit.SelectedDate.GetValueOrDefault( );
@@ -112,7 +112,7 @@ namespace Calendar
 
                     if (dp_end_date_edit.SelectedDate != null || dp_end_date_edit.Text != null)
                     {
-                        Event events = context.Events.First(c => c.id == selectedEventId);
+                        Event events = context.Event.First(c => c.id == selectedEventId);
 
                         events.name = result;
                         events.startDate = (DateTime)dp_end_date_edit.SelectedDate.GetValueOrDefault();
@@ -138,7 +138,7 @@ namespace Calendar
                             competitionId = selectedId
                         };
 
-                        context.EventsCompetitions.Remove(jt);
+                        context.EventCompetition.Remove(jt);
                         context.SaveChanges();
                         context.Entry(jt).State = EntityState.Detached;
                     }
@@ -159,7 +159,7 @@ namespace Calendar
 
                         };
 
-                        context.EventsCompetitions.Add(jt);
+                        context.EventCompetition.Add(jt);
 
                         context.SaveChanges();
                         context.Entry(jt).State = EntityState.Detached;
@@ -199,7 +199,7 @@ namespace Calendar
                 int selectedEventId = selectedEvent.id;
 
 
-                Event events = context.Events.First(c => c.id == selectedEventId);
+                Event events = context.Event.First(c => c.id == selectedEventId);
 
                 tb_edit_event.Text = events.name;
 
@@ -207,21 +207,21 @@ namespace Calendar
 
                 dp_end_date_edit.Text = events.endDate.ToString();
 
-                List<int> comp = context.EventsCompetitions.Select(c => c.eventId).ToList();
+                List<int> comp = context.EventCompetition.Select(c => c.eventId).ToList();
 
                 //Gets the Competicao data through the junction table using the Evento Id
                 if (comp.Contains(selectedEventId))
                 {
-                    var result = from e1 in context.Events
-                                 join junction in context.EventsCompetitions on e1.id equals junction.eventId
-                                 join e2 in context.Competitions on junction.competitionId equals e2.id
+                    var result = from e1 in context.Event
+                                 join junction in context.EventCompetition on e1.id equals junction.eventId
+                                 join e2 in context.Competition on junction.competitionId equals e2.id
                                  where e1.id == selectedEventId
                                  select e2;
 
                     lb_competitions.ItemsSource = result.ToList();
 
 
-                    var remainingCompeticoes = context.Competitions.Where(c => c.modalityId == selectedModalityId).Except(result);
+                    var remainingCompeticoes = context.Competition.Where(c => c.modalityId == selectedModalityId).Except(result);
 
                     // Display the remaining items in another ListBox (lb_remaining_competicoes)
                     lb_competitions_edit.ItemsSource = remainingCompeticoes.ToList();
@@ -229,7 +229,7 @@ namespace Calendar
                 else
                 {
                     lb_competitions.ItemsSource = null;
-                    var ev = context.Competitions.Where(c => c.modalityId == selectedModalityId).ToList();
+                    var ev = context.Competition.Where(c => c.modalityId == selectedModalityId).ToList();
                     lb_competitions_edit.ItemsSource = ev; ;
                 }
             }

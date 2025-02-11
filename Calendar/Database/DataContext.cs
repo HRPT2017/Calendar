@@ -13,10 +13,10 @@ namespace Calendar.Database
 
             opitionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB; AttachDbFilename =|DataDirectory|\\Calendar.mdf; Integrated Security = True");
         }
-        public DbSet<Modality> Modalities { get; set; }
-        public DbSet<Competition> Competitions { get; set; }
-        public DbSet<Event> Events { get; set; }
-        public DbSet<EventCompetition> EventsCompetitions { get; set; }
+        public DbSet<Modality> Modality { get; set; }
+        public DbSet<Competition> Competition { get; set; }
+        public DbSet<Event> Event { get; set; }
+        public DbSet<EventCompetition> EventCompetition { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -37,12 +37,14 @@ namespace Calendar.Database
             modelBuilder.Entity<EventCompetition>()
                         .HasOne(t => t.events)
                         .WithMany(j => j.eventConpetition)
-                        .HasForeignKey(j => j.eventId);
+                        .HasForeignKey(t => t.eventId)
+                        .OnDelete(DeleteBehavior.Restrict); 
 
             modelBuilder.Entity<EventCompetition>()
                         .HasOne(t => t.competition)
                         .WithMany(j => j.eventCompetition)
-                        .HasForeignKey(j => j.competitionId);
+                        .HasForeignKey(t => t.competitionId)
+                        .OnDelete(DeleteBehavior.Restrict);
 
 
 

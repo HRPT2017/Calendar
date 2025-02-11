@@ -20,9 +20,9 @@ namespace Calendar
 
         public void LoadModality()
         {
-            List<Modality> name = context.Modalities.ToList();
+            List<Modality> name = context.Modality.ToList();
             cb_modality.ItemsSource = name;
-            cb_modality.DisplayMemberPath = "Name";
+            cb_modality.DisplayMemberPath = "name";
 
         }
 
@@ -33,12 +33,12 @@ namespace Calendar
                 Modality selectedModality = (Modality)cb_modality.SelectedItem;
                 int selectedModalityId = selectedModality.id;
 
-                var eventos = context.Events.Where(c => c.modalityId == selectedModalityId).ToList();
+                var eventos = context.Event.Where(c => c.modalityId == selectedModalityId).ToList();
                 lb_events_edit.ItemsSource = eventos;
 
-                var competitions = context.Competitions.Where(c => c.modalityId== selectedModalityId).ToList();
+                var competitions = context.Competition.Where(c => c.modalityId== selectedModalityId).ToList();
                 cb_edit_competition.ItemsSource = competitions;
-                cb_edit_competition.DisplayMemberPath = "Name";
+                cb_edit_competition.DisplayMemberPath = "name";
 
                 tb_edit_competition.Text = null;
                 lb_event_edit.ItemsSource = null;
@@ -78,11 +78,11 @@ namespace Calendar
 
                 string aux = tb_edit_competition.Text.ToString();
                 string result = aux.TrimStart();
-                List<string> ev = context.Competitions.Select(c => c.name).ToList();
+                List<string> ev = context.Competition.Select(c => c.name).ToList();
                 if (!string.IsNullOrEmpty(aux))
                 {
 
-                    Competition events = context.Competitions.First(c => c.id == selectedcompetitionId);
+                    Competition events = context.Competition.First(c => c.id == selectedcompetitionId);
 
                     events.name = result;
 
@@ -105,7 +105,7 @@ namespace Calendar
                             competitionId= selectedcompetitionId
                         };
 
-                        context.EventsCompetitions.Remove(jt);
+                        context.EventCompetition.Remove(jt);
                         context.SaveChanges();
                         context.Entry(jt).State = EntityState.Detached;
                     }
@@ -125,7 +125,7 @@ namespace Calendar
                             competitionId = selectedcompetitionId
                         };
 
-                        context.EventsCompetitions.Add(jt);
+                        context.EventCompetition.Add(jt);
                         context.SaveChanges();
                         context.Entry(jt).State = EntityState.Detached;
                     }
@@ -164,24 +164,24 @@ namespace Calendar
                 int selectedModalityId = selectedModality.id;
 
 
-                Competition comp = context.Competitions.First(c => c.id == selectedcompetitionId);
+                Competition comp = context.Competition.First(c => c.id == selectedcompetitionId);
 
                 tb_edit_competition.Text = comp.name;
 
 
-                List<int> ev = context.EventsCompetitions.Select(c => c.competitionId).ToList();
+                List<int> ev = context.EventCompetition.Select(c => c.competitionId).ToList();
 
                 if (ev.Contains(selectedcompetitionId))
                 {
-                    var result = from e1 in context.Competitions
-                                 join junction in context.EventsCompetitions on e1.id equals junction.competitionId
-                                 join e2 in context.Events on junction.eventId equals e2.id
+                    var result = from e1 in context.Competition
+                                 join junction in context.EventCompetition on e1.id equals junction.competitionId
+                                 join e2 in context.Event on junction.eventId equals e2.id
                                  where e1.id == selectedcompetitionId
                                  select e2;
 
                     lb_events_edit.ItemsSource = result.ToList();
 
-                    var remainingEvents = context.Events.Where(c => c.modalityId == selectedModalityId).Except(result);
+                    var remainingEvents = context.Event.Where(c => c.modalityId == selectedModalityId).Except(result);
 
                     // Display the remaining items in another ListBox (lb_remaining_competicoes)
                     lb_event_edit.ItemsSource = remainingEvents.ToList();
@@ -189,7 +189,7 @@ namespace Calendar
                 else
                 {
                     lb_events_edit.ItemsSource = null;
-                    var events = context.Events.Where(c => c.modalityId == selectedModalityId).ToList();
+                    var events = context.Event.Where(c => c.modalityId == selectedModalityId).ToList();
                     lb_event_edit.ItemsSource = events;
                 }
             }

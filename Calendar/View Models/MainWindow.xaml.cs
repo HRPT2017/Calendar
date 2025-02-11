@@ -21,13 +21,22 @@ namespace Calendar
     {
         DataContext context = new DataContext();
 
-        private readonly ScraperService scraperService;
-        private string? scrapedData;
+        private readonly CalendarScraper calendarScraper;
+        private string? calendarData;
 
-        public string ScrapedData
+        private readonly ModalityCompetitionScrapper mcScraper;
+        private string? mcData;
+
+        public string CalendarData
         {
-            get => scrapedData ?? "";
-            set { scrapedData = value; OnPropertyChanged(); }
+            get => calendarData ?? "";
+            set { calendarData = value; OnPropertyChanged(); }
+        }
+
+        public string MCData
+        {
+            get => mcData ?? "";
+            set { mcData = value; OnPropertyChanged(); }
         }
 
         public IRelayCommand ScrapeCommand { get; }
@@ -40,39 +49,44 @@ namespace Calendar
 
             LoadCompetition();
 
-            scraperService = new ScraperService() ;
-            ScrapeCommand = new RelayCommand(async () => await ScrapeWebsite());
+            calendarScraper = new CalendarScraper();
+            mcScraper = new ModalityCompetitionScrapper();
+
+            ScrapeCommand = new RelayCommand(async () => await ScrapeCalendar());
+
+
+
         }
 
         public void LoadModality()
         {
-            List<Modality> name = context.Modalities.ToList();
+            List<Modality> name = context.Modality.ToList();
             cb_modality.ItemsSource = name;
-            cb_modality.DisplayMemberPath = "Name";
+            cb_modality.DisplayMemberPath = "name";
 
         }
 
         public void LoadCompetition()
         {
-            List<Competition> name = context.Competitions.ToList();
+            List<Competition> name = context.Competition.ToList();
             cb_competition.ItemsSource = name;
-            cb_competition.DisplayMemberPath = "Name";
+            cb_competition.DisplayMemberPath = "name";
 
         }
 
         private void cb_modality_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if(cb_modality.SelectedItem != null)
+            if (cb_modality.SelectedItem != null)
             {
                 Modality selectedModality = (Modality)cb_modality.SelectedItem;
                 int selectedModalityId = selectedModality.id;
 
-                var competitions = context.Competitions.Where(c => c.modalityId == selectedModalityId).ToList();
+                var competitions = context.Competition.Where(c => c.modalityId == selectedModalityId).ToList();
                 cb_competition.ItemsSource = competitions;
-                cb_competition.DisplayMemberPath = "Name";
+                cb_competition.DisplayMemberPath = "name";
 
 
-                var events = context.Competitions.Where(c => c.modalityId == selectedModalityId).ToList();
+                var events = context.Competition.Where(c => c.modalityId == selectedModalityId).ToList();
                 lb_events.ItemsSource = events;
 
 
@@ -87,25 +101,25 @@ namespace Calendar
                 Competition selectedCompetition = (Competition)cb_competition.SelectedItem;
                 int selectedCompetitionId = selectedCompetition.id;
 
-                
-                List<int> event_ = context.EventsCompetitions.Select(c => c.competitionId).ToList();
+
+                List<int> event_ = context.EventCompetition.Select(c => c.competitionId).ToList();
 
 
-                if(event_.Contains(selectedCompetitionId))
+                if (event_.Contains(selectedCompetitionId))
                 {
-                    var result = from e1 in context.Competitions
-                                 join junction in context.EventsCompetitions on e1.id equals junction.competitionId
-                                 join e2 in context.Events on junction.eventId equals e2.id
+                    var result = from e1 in context.Competition
+                                 join junction in context.EventCompetition on e1.id equals junction.competitionId
+                                 join e2 in context.Event on junction.eventId equals e2.id
                                  where e1.id == selectedCompetitionId
                                  select new
-                                 { 
-                                    Nome= e2.name,
+                                 {
+                                     Nome = e2.name,
                                      Data = e2.startDate.ToString("dd/MM/yyyy")
                                  };
 
                     lb_events.ItemsSource = result.ToList();
                 }
-                else 
+                else
                 {
                     lb_events.ItemsSource = null;
                 }
@@ -201,7 +215,7 @@ namespace Calendar
             evento.Top = mainWindowTop;
             evento.Width = mainWindowWidth;
             evento.Height = mainWindowHeight;
-            evento.WindowState= mainWindowState;
+            evento.WindowState = mainWindowState;
             evento.Show();
             Close();
         }
@@ -228,16 +242,16 @@ namespace Calendar
         public void GenerateICalFile(string filePath)
         {
             //Gets nome from both Competicao and Evento through the junctiontable and also the data 
-            var events = from e1 in context.Competitions
-                         join junction in context.EventsCompetitions on e1.id equals junction.competitionId
-                         join e2 in context.Events on junction.eventId equals e2.id
+            var events = from e1 in context.Competition
+                         join junction in context.EventCompetition on e1.id equals junction.competitionId
+                         join e2 in context.Event on junction.eventId equals e2.id
                          select new
                          {
                              eventName = e2.name,
                              competitionName = e1.name,
                              startDate = e2.startDate.ToString("yyyyMMdd"),
                              endDate = e2.endDate.HasValue ? e2.endDate.Value.ToString("yyyyMMdd") : e2.startDate.ToString("yyyyMMdd")
-        };
+                         };
 
             //Create the file using the previous values
             using (var fs = new FileStream(filePath, FileMode.Create, FileAccess.Write))
@@ -304,12 +318,20 @@ namespace Calendar
             }
         }
 
-        private void btScrapeWebsite(object sender, RoutedEventArgs e) => ScrapeWebsite();
+        private void btScrapeCalendar(object sender, RoutedEventArgs e) => ScrapeCalendar();
 
-        private async Task ScrapeWebsite()
+        private async Task ScrapeCalendar()
         {
-            ScrapedData = "Loading...";
-            ScrapedData = await scraperService.ScrapeDataAsync("https://www.fpak.pt/calendario?d=now");
+            CalendarData = "Loading...";
+            CalendarData = await calendarScraper.ScrapeDataAsync();
+        }
+
+        private void btScrapeMC(object sender, RoutedEventArgs e) => ScrapeMC();
+
+        private async Task ScrapeMC()
+        {
+            MCData = "Loading...";
+            MCData= await mcScraper.ScrapeDataAsync();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

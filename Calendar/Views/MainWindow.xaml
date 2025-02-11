@@ -263,21 +263,23 @@
             </ListBox.ItemTemplate>
         </ListBox>
         <!--Menu buttons-->
-        <!--Criar Competição-->
-        <Button x:Name="bt_create_competition" Click="bt_create_competition_Click" Content="Criar Competição" HorizontalAlignment="Left" Margin="430,16,0,0" VerticalAlignment="Top" Height="35" Width="143"/>
-        <!--Criar Evento-->
-        <Button x:Name="bt_create_event" Click="bt_create_event_Click" Content="Criar Evento" HorizontalAlignment="Left" Margin="595,16,0,0" VerticalAlignment="Top" Height="35" Width="143"/>
-        <!--Editar Evento-->
-        <Button x:Name="bt_edit_menu_event" Click="bt_edit_menu_event_Click" Content="Editar Evento" HorizontalAlignment="Left" Margin="595,69,0,0" VerticalAlignment="Top" Height="35" Width="143"/>
-        <!--Editar Competição-->
-        <Button x:Name="bt_edit_menu_competition" Click="bt_edit_menu_competition_Click" Content="Editar Competição" HorizontalAlignment="Left" Margin="430,69,0,0" VerticalAlignment="Top" Height="35" Width="143"/>
-        <!--Eliminar Evento-->
-        <Button x:Name="bt_remove_menu_event" Click="bt_remove_menu_event_Click" Content="Eliminar Evento" HorizontalAlignment="Left" Margin="595,129,0,0" VerticalAlignment="Top" Height="35" Width="143" />
-        <!--Eliminar Competição-->
-        <Button x:Name="bt_delete_competition" Click="bt_delete_competition_Click" Content="Eliminar Competição" HorizontalAlignment="Left" Margin="430,129,0,0" VerticalAlignment="Top" Height="35" Width="143"/>
-        <!--Exportar Ical-->
+        <!--Create Competition-->
+        <Button x:Name="bt_create_competition" Click="bt_create_competition_Click" Content="Create Competition" HorizontalAlignment="Left" Margin="430,16,0,0" VerticalAlignment="Top" Height="35" Width="143"/>
+        <!--Create Event-->
+        <Button x:Name="bt_create_event" Click="bt_create_event_Click" Content="Create Event" HorizontalAlignment="Left" Margin="595,16,0,0" VerticalAlignment="Top" Height="35" Width="143"/>
+        <!--Edit Event-->
+        <Button x:Name="bt_edit_menu_event" Click="bt_edit_menu_event_Click" Content="Edit Event" HorizontalAlignment="Left" Margin="595,69,0,0" VerticalAlignment="Top" Height="35" Width="143"/>
+        <!--Edit Competition-->
+        <Button x:Name="bt_edit_menu_competition" Click="bt_edit_menu_competition_Click" Content="Edit Competition" HorizontalAlignment="Left" Margin="430,69,0,0" VerticalAlignment="Top" Height="35" Width="143"/>
+        <!--Delete Event-->
+        <Button x:Name="bt_remove_menu_event" Click="bt_remove_menu_event_Click" Content="Delete Event" HorizontalAlignment="Left" Margin="595,129,0,0" VerticalAlignment="Top" Height="35" Width="143" />
+        <!--Delete Competition-->
+        <Button x:Name="bt_delete_competition" Click="bt_delete_competition_Click" Content="Delete Competiton" HorizontalAlignment="Left" Margin="430,129,0,0" VerticalAlignment="Top" Height="35" Width="143"/>
+        <!--Export Ical-->
         <Button x:Name="bt_ical" Content="Export Ical" Click="bt_ical_Click" HorizontalAlignment="Left" Margin="430,182,0,0" VerticalAlignment="Top" Height="35" Width="143"/>
-        <Button Content="Scrape Website" Command="{Binding ScrapeCommand}" Click="btScrapeWebsite" HorizontalAlignment="Left" Margin="595,182,0,0" VerticalAlignment="Top" Height="35" Width="143" />
-        <TextBlock Text="{Binding ScrapedData}" TextWrapping="Wrap" HorizontalAlignment="Left" Margin="502,200,0,0" VerticalAlignment="Top" />
+        <!--Import Calendar-->
+        <Button Content="Import Calendar" Command="{Binding ScrapeCommand}" Click="btScrapeCalendar" HorizontalAlignment="Left" Margin="595,182,0,0" VerticalAlignment="Top" Height="35" Width="143" />
+        <!--Import Modalites and Competitions-->
+        <Button Content="Import Modalites and Competitions" Command="{Binding ScrapeCommand}" Click="btScrapeMC" HorizontalAlignment="Left" Margin="432,240,0,0" VerticalAlignment="Top" Height="35" Width="306" />
     </Grid>
 </Window>

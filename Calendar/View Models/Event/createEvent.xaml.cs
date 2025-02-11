@@ -20,11 +20,11 @@ namespace Calendar
 
         public void LoadModality()
         {
-            List<Modality> name = context.Modalities.ToList();
-            cb_modality.ItemsSource = name;
-            cb_modality.DisplayMemberPath = "Name";
+            List<Modality> name = context.Modality.ToList();
+            cb_modality.ItemsSource = name; 
+            cb_modality.DisplayMemberPath = "name";
 
-
+                
         }
 
         private void cb_modality_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -34,7 +34,7 @@ namespace Calendar
                 Modality selectedModality = (Modality)cb_modality.SelectedItem;
                 int selectedModalityId = selectedModality.id;
 
-                var competitions = context.Competitions.Where(c => c.modalityId == selectedModalityId).ToList();
+                var competitions = context.Competition.Where(c => c.modalityId == selectedModalityId).ToList();
                 lb_competitions.ItemsSource = competitions;
             }
 
@@ -66,7 +66,7 @@ namespace Calendar
             {
                 string aux = tb_event_name.Text.ToString();
                 string result = aux.TrimStart();
-                List<string> ev = context.Events.Select(c => c.name).ToList();
+                List<string> ev = context.Event.Select(c => c.name).ToList();
 
                 Modality selectedModaltiy = (Modality)cb_modality.SelectedItem;
                 int selectedModaltiyId = selectedModaltiy.id;
@@ -98,7 +98,7 @@ namespace Calendar
                                         competitionId= selectedId
                                     };
 
-                                    context.EventsCompetitions.Add(jt);
+                                    context.EventCompetition.Add(jt);
                                 }
                                 context.SaveChanges();
                                 cb_modality.SelectedItem = null;

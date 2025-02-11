@@ -239,7 +239,7 @@
         <ListBox x:Name="lb_events"   SelectionMode="Multiple" Visibility="Visible" Margin="283,42,211,241">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <TextBlock Text="{Binding Name}" FontWeight="Bold" />
+                    <TextBlock Text="{Binding name}" FontWeight="Bold" />
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>

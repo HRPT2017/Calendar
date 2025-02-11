@@ -1,4 +1,6 @@
-﻿namespace Calendar.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Calendar.Models
 {
     public class Event
     {
@@ -9,7 +11,9 @@
         public DateTime? endDate { get; set; }
 
         public required int modalityId { get; set; }
-        public Modality? modality { get; set; }
+
+        [ForeignKey("modalityId")]
+        public Modality ? modality { get; set; }
 
 
         public virtual ICollection<EventCompetition> ? eventConpetition { get; set; }

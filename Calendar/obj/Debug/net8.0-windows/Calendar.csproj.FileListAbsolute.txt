@@ -263,3 +263,17 @@ C:\Users\hugo1\Desktop\Calendar\Calendar\bin\Debug\net8.0-windows\runtimes\win-x
 C:\Users\hugo1\Desktop\Calendar\Calendar\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
 C:\Users\hugo1\Desktop\Calendar\Calendar\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\hugo1\Desktop\Calendar\Calendar\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\hugo1\Desktop\Calendar\Calendar\bin\Debug\net8.0-windows\itext.barcodes.dll
+C:\Users\hugo1\Desktop\Calendar\Calendar\bin\Debug\net8.0-windows\itext.bouncy-castle-connector.dll
+C:\Users\hugo1\Desktop\Calendar\Calendar\bin\Debug\net8.0-windows\itext.forms.dll
+C:\Users\hugo1\Desktop\Calendar\Calendar\bin\Debug\net8.0-windows\itext.io.dll
+C:\Users\hugo1\Desktop\Calendar\Calendar\bin\Debug\net8.0-windows\itext.kernel.dll
+C:\Users\hugo1\Desktop\Calendar\Calendar\bin\Debug\net8.0-windows\itext.layout.dll
+C:\Users\hugo1\Desktop\Calendar\Calendar\bin\Debug\net8.0-windows\itext.pdfa.dll
+C:\Users\hugo1\Desktop\Calendar\Calendar\bin\Debug\net8.0-windows\itext.pdfua.dll
+C:\Users\hugo1\Desktop\Calendar\Calendar\bin\Debug\net8.0-windows\itext.sign.dll
+C:\Users\hugo1\Desktop\Calendar\Calendar\bin\Debug\net8.0-windows\itext.styledxmlparser.dll
+C:\Users\hugo1\Desktop\Calendar\Calendar\bin\Debug\net8.0-windows\itext.svg.dll
+C:\Users\hugo1\Desktop\Calendar\Calendar\bin\Debug\net8.0-windows\itext.commons.dll
+C:\Users\hugo1\Desktop\Calendar\Calendar\bin\Debug\net8.0-windows\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\hugo1\Desktop\Calendar\Calendar\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
