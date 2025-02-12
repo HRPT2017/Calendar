@@ -21,10 +21,8 @@ namespace Calendar
     {
         DataContext context = new DataContext();
 
-        private readonly CalendarScraper calendarScraper;
+        private readonly ScraperService scraperService;
         private string? calendarData;
-
-        private readonly ModalityCompetitionScrapper mcScraper;
         private string? mcData;
 
         public string CalendarData
@@ -49,8 +47,7 @@ namespace Calendar
 
             LoadCompetition();
 
-            calendarScraper = new CalendarScraper();
-            mcScraper = new ModalityCompetitionScrapper();
+            scraperService = new ScraperService();
 
             ScrapeCommand = new RelayCommand(async () => await ScrapeCalendar());
 
@@ -86,7 +83,7 @@ namespace Calendar
                 cb_competition.DisplayMemberPath = "name";
 
 
-                var events = context.Competition.Where(c => c.modalityId == selectedModalityId).ToList();
+                var events = context.Event.Where(c => c.modalityId == selectedModalityId).ToList();
                 lb_events.ItemsSource = events;
 
 
@@ -113,10 +110,12 @@ namespace Calendar
                                  where e1.id == selectedCompetitionId
                                  select new
                                  {
-                                     Nome = e2.name,
-                                     Data = e2.startDate.ToString("dd/MM/yyyy")
+                                     name = e2.name,
+                                     startDate = e2.startDate.ToString("dd/MM/yyyy"),
+                                     endDate = e2.endDate.HasValue ? e2.endDate.Value.ToString("dd/MM/yyyy") : null
                                  };
 
+                    lb_events.ItemsSource = result.ToList();
                     lb_events.ItemsSource = result.ToList();
                 }
                 else
@@ -323,7 +322,21 @@ namespace Calendar
         private async Task ScrapeCalendar()
         {
             CalendarData = "Loading...";
-            CalendarData = await calendarScraper.ScrapeDataAsync();
+            CalendarData = await scraperService.ScrapeCalendarData();
+            double mainWindowLeft = Left;
+            double mainWindowTop = Top;
+            double mainWindowWidth = Width;
+            double mainWindowHeight = Height;
+            WindowState mainWindowState = WindowState;
+
+            MainWindow eve = new MainWindow();
+            eve.Left = mainWindowLeft;
+            eve.Top = mainWindowTop;
+            eve.Width = mainWindowWidth;
+            eve.Height = mainWindowHeight;
+            eve.WindowState = mainWindowState;
+            eve.Show();
+            Close();
         }
 
         private void btScrapeMC(object sender, RoutedEventArgs e) => ScrapeMC();
@@ -331,7 +344,21 @@ namespace Calendar
         private async Task ScrapeMC()
         {
             MCData = "Loading...";
-            MCData= await mcScraper.ScrapeDataAsync();
+            MCData= await scraperService.ScrapeMCData();
+            double mainWindowLeft = Left;
+            double mainWindowTop = Top;
+            double mainWindowWidth = Width;
+            double mainWindowHeight = Height;
+            WindowState mainWindowState = WindowState;
+
+            MainWindow eve = new MainWindow();
+            eve.Left = mainWindowLeft;
+            eve.Top = mainWindowTop;
+            eve.Width = mainWindowWidth;
+            eve.Height = mainWindowHeight;
+            eve.WindowState = mainWindowState;
+            eve.Show();
+            Close();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

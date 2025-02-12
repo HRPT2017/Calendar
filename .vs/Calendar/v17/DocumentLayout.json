@@ -59,8 +59,7 @@
               "ViewState": "AgIAADYAAAAAAAAAAAAAwEAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-04T10:56:57.601Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -84,8 +83,7 @@
               "RelativeToolTip": "Calendar\\AssemblyInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T16:54:04.681Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-06T16:54:04.681Z"
             },
             {
               "$type": "Document",
@@ -97,8 +95,7 @@
               "RelativeToolTip": "Calendar\\Database\\DataContext.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAwwBQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T16:42:07.328Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-06T16:42:07.328Z"
             },
             {
               "$type": "Document",
@@ -110,8 +107,7 @@
               "RelativeToolTip": "Calendar\\Models\\Modality.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T16:42:00.368Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-06T16:42:00.368Z"
             },
             {
               "$type": "Document",
@@ -122,8 +118,7 @@
               "ToolTip": "C:\\Users\\hugo1\\Desktop\\Calendar\\Calendar\\Views\\MainWindow.xaml",
               "RelativeToolTip": "Calendar\\Views\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-06T16:20:50.735Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-06T16:20:50.735Z"
             },
             {
               "$type": "Document",
@@ -135,8 +130,7 @@
               "RelativeToolTip": "Calendar\\Models\\Event.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T16:18:34.87Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-06T16:18:34.87Z"
             },
             {
               "$type": "Document",
@@ -148,8 +142,7 @@
               "RelativeToolTip": "Calendar\\View Models\\Competition\\createCompetition.xaml.cs",
               "ViewState": "AgIAAEYAAAAAAAAAAAAcwHEAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T16:07:16.657Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-06T16:07:16.657Z"
             },
             {
               "$type": "Document",
@@ -161,8 +154,7 @@
               "RelativeToolTip": "Calendar\\View Models\\Competition\\deleteCompetition.xaml.cs",
               "ViewState": "AgIAAHoAAAAAAAAAAAAmwKEAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T16:04:34.621Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-06T16:04:34.621Z"
             }
           ]
         }

@@ -67,7 +67,7 @@ namespace Calendar
 
                 var events = context.Event.Where(c => c.modalityId == selectedModalityId).ToList();
                 cb_edit_event.ItemsSource = events;
-                cb_edit_event.DisplayMemberPath = "Name";
+                cb_edit_event.DisplayMemberPath = "name";
 
                 tb_edit_event.Text = null;
                 dp_start_date_edit.Text = null;
@@ -82,9 +82,6 @@ namespace Calendar
         {
             if (cb_modality != null)
             {
-                // Gets the Id from the selected Modalidade
-                //Modality selectedModality = (Modality)cb_modality.SelectedItem;
-                //int selectedModalityId = selectedModality.id;
 
                 // Gets the Id from the selected Evento
                 Event selectedEvent = (Event)cb_edit_event.SelectedItem;
