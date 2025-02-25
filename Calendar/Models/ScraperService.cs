@@ -56,13 +56,13 @@ namespace Calendar.Models
                             DateTime startDate = DateTimeOffset.FromUnixTimeSeconds(timestamp1).UtcDateTime;
                             string? eventName = node.SelectSingleNode(".//div[contains(@class, 'corpo')]//a")?.InnerText.Trim();
                             var badges = node.SelectNodes(".//span[contains(@class, 'badge-success')]");
-                            Debug.WriteLine($"{eventName}");
+                            var checkEvent = context.Event.FirstOrDefault(e => e.name == eventName);
                             if (badges != null)
                             {
                                 var competition = context.Competition.FirstOrDefault(c => c.badge == badges[0].InnerText.Trim());
                                 if (competition != null)
                                 {
-                                    var checkEvent = context.Event.FirstOrDefault(e => e.name == eventName);
+                                    
                                     var eventId = 0;
                                     if (checkEvent == null)
                                     {
@@ -80,6 +80,17 @@ namespace Calendar.Models
                                     else
                                     {
                                         eventId = checkEvent.id;
+                                        Event events = context.Event.First(c => c.id == eventId);
+
+                                        events.name = eventName ?? "";
+                                        events.startDate = startDate;
+                                        events.endDate = endDate;
+                                        events.modalityId = competition.modalityId;
+
+                                        context.Update(events);
+                                        context.SaveChanges();
+                                        
+
                                     }
 
 
@@ -106,16 +117,29 @@ namespace Calendar.Models
                             }
                             else
                             {
-                                Debug.WriteLine($"called");
-                                var event_ = new Event()
+                                if (checkEvent == null) 
                                 {
-                                    endDate = endDate,
-                                    startDate = startDate,
-                                    name = eventName ?? "",
-                                    modalityId = 55
-                                };
-                                context.Event.Add(event_);
-                                context.SaveChanges();
+                                    var event_ = new Event()
+                                    {
+                                        endDate = endDate,
+                                        startDate = startDate,
+                                        name = eventName ?? "",
+                                        modalityId = 55
+                                    };
+                                    context.Event.Add(event_);
+                                    context.SaveChanges();
+                                }
+                                else
+                                {
+                                    Event events = context.Event.First(c => c.id == checkEvent.id);
+                                    events.name = eventName ?? "";
+                                    events.startDate = startDate;
+                                    events.endDate = endDate;
+                                    events.modalityId = 55;
+                                    context.Update(events);
+                                    context.SaveChanges();
+                                }
+
                             }
                         }
                     }

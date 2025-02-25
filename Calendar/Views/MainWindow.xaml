@@ -234,19 +234,11 @@
 
 
     <Grid>
-
-
-        <!-- Add the rest of your window content below -->
-        <!--Main Window-->
-
         <!--Modalidade-->
-        <Label x:Name="l_modality" Content="Modality"  HorizontalAlignment="Left" Margin="35,16,0,0" VerticalAlignment="Top" Width="120">
-
-        </Label>
+        <Label x:Name="l_modality" Content="Modality"  HorizontalAlignment="Left" Margin="35,16,0,0" VerticalAlignment="Top" Width="120"></Label>
         <ComboBox x:Name="cb_modality"  HorizontalAlignment="Left" Margin="35,42,0,0" VerticalAlignment="Top" Width="205" SelectionChanged="cb_modality_SelectionChanged" Height="22" />
         <!--Competição-->
-        <Label x:Name="l_competition" Content="Competition"  HorizontalAlignment="Left" Margin="35,69,0,0" VerticalAlignment="Top" Width="120" >
-        </Label>
+        <Label x:Name="l_competition" Content="Competition"  HorizontalAlignment="Left" Margin="35,69,0,0" VerticalAlignment="Top" Width="120" ></Label>
         <ComboBox x:Name="cb_competition" HorizontalAlignment="Left" Margin="35,99,0,0" VerticalAlignment="Top" Width="205" Height="25" SelectionChanged="cb_competition_SelectionChanged"/>
         <!--Eventos-->
         <Label x:Name="l_event" Content="Event"  HorizontalAlignment="Left" Margin="35,138,0,0" VerticalAlignment="Top" Width="120">
@@ -256,8 +248,7 @@
                 <DataTemplate>
                     <StackPanel>
                         <TextBlock Text="{Binding name}" FontWeight="Bold" />
-                        <TextBlock Text="{Binding startDate, StringFormat='dd/MM/yyyy'}" HorizontalAlignment="Left" TextTrimming="None" MaxWidth="65" />
-                        <TextBlock Text="{Binding endDate, StringFormat='dd/MM/yyyy'}" HorizontalAlignment="Left" TextTrimming="None" MaxWidth="65" />
+                        <TextBlock Text="{Binding dateRange}"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>

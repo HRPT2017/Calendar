@@ -84,7 +84,18 @@ namespace Calendar
 
 
                 var events = context.Event.Where(c => c.modalityId == selectedModalityId).ToList();
-                lb_events.ItemsSource = events;
+                List<dynamic> result = new List<dynamic>();
+                foreach (var item in events)
+                {
+                    result.Add(new
+                    {
+                        name = item.name,
+                        dateRange = item.endDate.HasValue
+                        ? item.startDate.ToString("dd/MM/yyyy") + " - " + item.endDate.Value.ToString("dd/MM/yyyy")
+                        : item.startDate.ToString("dd/MM/yyyy")
+                    });
+                }
+                lb_events.ItemsSource = result;
 
 
             }
@@ -111,11 +122,11 @@ namespace Calendar
                                  select new
                                  {
                                      name = e2.name,
-                                     startDate = e2.startDate.ToString("dd/MM/yyyy"),
-                                     endDate = e2.endDate.HasValue ? e2.endDate.Value.ToString("dd/MM/yyyy") : null
+                                     dateRange = e2.endDate.HasValue 
+                                     ? e2.startDate.ToString("dd/MM/yyyy") + " - "+ e2.endDate.Value.ToString("dd/MM/yyyy") 
+                                     : e2.startDate.ToString("dd/MM/yyyy")
                                  };
 
-                    lb_events.ItemsSource = result.ToList();
                     lb_events.ItemsSource = result.ToList();
                 }
                 else
@@ -244,12 +255,15 @@ namespace Calendar
             var events = from e1 in context.Competition
                          join junction in context.EventCompetition on e1.id equals junction.competitionId
                          join e2 in context.Event on junction.eventId equals e2.id
+                         join modality in context.Modality on e1.modalityId equals modality.id
                          select new
                          {
                              eventName = e2.name,
                              competitionName = e1.name,
+                             badge = e1.badge,
                              startDate = e2.startDate.ToString("yyyyMMdd"),
-                             endDate = e2.endDate.HasValue ? e2.endDate.Value.ToString("yyyyMMdd") : e2.startDate.ToString("yyyyMMdd")
+                             endDate = e2.endDate.HasValue ? e2.endDate.Value.ToString("yyyyMMdd") : e2.startDate.ToString("yyyyMMdd"),
+                             modalityName = modality.name
                          };
 
             //Create the file using the previous values
@@ -264,9 +278,10 @@ namespace Calendar
                 foreach (var calendarEvent in events)
                 {
                     writer.WriteLine("BEGIN:VEVENT");
-                    writer.WriteLine($"SUMMARY:{calendarEvent.competitionName} - {calendarEvent.eventName}");
+                    writer.WriteLine($"SUMMARY:{calendarEvent.competitionName} ({calendarEvent.badge}) - {calendarEvent.eventName}");
                     writer.WriteLine($"DTSTART:{calendarEvent.startDate:yyyyMMdd}");
                     writer.WriteLine($"DTEND:{calendarEvent.endDate:yyyyMMdd}");
+                    writer.WriteLine($"DESCRIPTION:{calendarEvent.modalityName}");
                     writer.WriteLine("END:VEVENT");
                 }
 
