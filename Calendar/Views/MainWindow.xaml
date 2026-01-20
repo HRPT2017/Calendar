@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calendar"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" 
+        Title="MainWindow" Height="411" Width="700" 
         SizeChanged="Window_SizeChanged"
         Icon="/Views/logo.ico"
         Background="Black">
@@ -235,15 +235,22 @@
 
     <Grid>
         <!--Modalidade-->
-        <Label x:Name="l_modality" Content="Modality"  HorizontalAlignment="Left" Margin="35,16,0,0" VerticalAlignment="Top" Width="120"></Label>
-        <ComboBox x:Name="cb_modality"  HorizontalAlignment="Left" Margin="35,42,0,0" VerticalAlignment="Top" Width="205" SelectionChanged="cb_modality_SelectionChanged" Height="22" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*">
+
+            </ColumnDefinition>
+            <ColumnDefinition Width="Auto">
+
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="l_modality" Content="Modality"  HorizontalAlignment="Left" Margin="35,16,0,0" VerticalAlignment="Top" Width="120" Height="29"/>
+        <ComboBox x:Name="cb_modality"  HorizontalAlignment="Left" Margin="35,42,30,0" VerticalAlignment="Top" Width="205" SelectionChanged="cb_modality_SelectionChanged" Height="22" />
         <!--Competição-->
-        <Label x:Name="l_competition" Content="Competition"  HorizontalAlignment="Left" Margin="35,69,0,0" VerticalAlignment="Top" Width="120" ></Label>
-        <ComboBox x:Name="cb_competition" HorizontalAlignment="Left" Margin="35,99,0,0" VerticalAlignment="Top" Width="205" Height="25" SelectionChanged="cb_competition_SelectionChanged"/>
+        <Label x:Name="l_competition" Content="Competition"  HorizontalAlignment="Left" Margin="35,69,0,0" VerticalAlignment="Top" Width="120" Height="29" />
+        <ComboBox x:Name="cb_competition" HorizontalAlignment="Left" Margin="35,99,30,0" VerticalAlignment="Top" Width="205" Height="25" SelectionChanged="cb_competition_SelectionChanged"/>
         <!--Eventos-->
-        <Label x:Name="l_event" Content="Event"  HorizontalAlignment="Left" Margin="35,138,0,0" VerticalAlignment="Top" Width="120">
-        </Label>
-        <ListBox x:Name="lb_events" Margin="35,182,373,67">
+        <Label x:Name="l_event" Content="Event"  HorizontalAlignment="Left" Margin="35,138,0,0" VerticalAlignment="Top" Width="120" Height="29"/>
+        <ListBox x:Name="lb_events" Margin="35,172,20,77">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -253,24 +260,23 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <!--Menu buttons-->
         <!--Create Competition-->
-        <Button x:Name="bt_create_competition" Click="bt_create_competition_Click" Content="Create Competition" HorizontalAlignment="Left" Margin="430,16,0,0" VerticalAlignment="Top" Height="35" Width="143"/>
+        <Button x:Name="bt_create_competition" Click="bt_create_competition_Click" Content="Create Competition" HorizontalAlignment="Left" Margin="23,22,0,0" VerticalAlignment="Top" Height="35" Width="143" Grid.Column="1"/>
         <!--Create Event-->
-        <Button x:Name="bt_create_event" Click="bt_create_event_Click" Content="Create Event" HorizontalAlignment="Left" Margin="595,16,0,0" VerticalAlignment="Top" Height="35" Width="143"/>
+        <Button x:Name="bt_create_event" Click="bt_create_event_Click" Content="Create Event" HorizontalAlignment="Left" Margin="200,22,20,0" VerticalAlignment="Top" Height="35" Width="143" Grid.Column="1"/>
         <!--Edit Event-->
-        <Button x:Name="bt_edit_menu_event" Click="bt_edit_menu_event_Click" Content="Edit Event" HorizontalAlignment="Left" Margin="595,69,0,0" VerticalAlignment="Top" Height="35" Width="143"/>
+        <Button x:Name="bt_edit_menu_event" Click="bt_edit_menu_event_Click" Content="Edit Event" HorizontalAlignment="Left" Margin="200,69,0,0" VerticalAlignment="Top" Height="35" Width="143" Grid.Column="1"/>
         <!--Edit Competition-->
-        <Button x:Name="bt_edit_menu_competition" Click="bt_edit_menu_competition_Click" Content="Edit Competition" HorizontalAlignment="Left" Margin="430,69,0,0" VerticalAlignment="Top" Height="35" Width="143"/>
+        <Button x:Name="bt_edit_menu_competition" Click="bt_edit_menu_competition_Click" Content="Edit Competition" HorizontalAlignment="Left" Margin="23,69,0,0" VerticalAlignment="Top" Height="35" Width="143" Grid.Column="1"/>
         <!--Delete Event-->
-        <Button x:Name="bt_remove_menu_event" Click="bt_remove_menu_event_Click" Content="Delete Event" HorizontalAlignment="Left" Margin="595,129,0,0" VerticalAlignment="Top" Height="35" Width="143" />
+        <Button x:Name="bt_remove_menu_event" Click="bt_remove_menu_event_Click" Content="Delete Event" HorizontalAlignment="Left" Margin="200,129,0,0" VerticalAlignment="Top" Height="35" Width="143" Grid.Column="1"/>
         <!--Delete Competition-->
-        <Button x:Name="bt_delete_competition" Click="bt_delete_competition_Click" Content="Delete Competiton" HorizontalAlignment="Left" Margin="430,129,0,0" VerticalAlignment="Top" Height="35" Width="143"/>
+        <Button x:Name="bt_delete_competition" Click="bt_delete_competition_Click" Content="Delete Competiton" HorizontalAlignment="Left" Margin="23,129,0,0" VerticalAlignment="Top" Height="35" Width="143" Grid.Column="1"/>
         <!--Export Ical-->
-        <Button x:Name="bt_ical" Content="Export Ical" Click="bt_ical_Click" HorizontalAlignment="Left" Margin="430,182,0,0" VerticalAlignment="Top" Height="35" Width="143"/>
+        <Button x:Name="bt_ical" Content="Export Ical" Click="bt_ical_Click" HorizontalAlignment="Left" Margin="23,182,0,0" VerticalAlignment="Top" Height="35" Width="143" Grid.Column="1"/>
         <!--Import Calendar-->
-        <Button Content="Import Calendar" Command="{Binding ScrapeCommand}" Click="btScrapeCalendar" HorizontalAlignment="Left" Margin="595,182,0,0" VerticalAlignment="Top" Height="35" Width="143" />
+        <Button Content="Import Calendar" Command="{Binding ScrapeCommand}" Click="btScrapeCalendar" HorizontalAlignment="Left" Margin="200,182,0,0" VerticalAlignment="Top" Height="35" Width="143" Grid.Column="1" />
         <!--Import Modalites and Competitions-->
-        <Button Content="Import Modalites and Competitions" Command="{Binding ScrapeCommand}" Click="btScrapeMC" HorizontalAlignment="Left" Margin="432,240,0,0" VerticalAlignment="Top" Height="35" Width="306" />
+        <Button Content="Import Modalites and Competitions" Command="{Binding ScrapeCommand}" Click="btScrapeMC" HorizontalAlignment="Left" Margin="31,240,0,0" VerticalAlignment="Top" Height="35" Width="306" Grid.Column="1" />
     </Grid>
 </Window>

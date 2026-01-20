@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\hugo1\Desktop\Stuff\Projects\Calendar\Calendar\obj\Debug\net8.0-windows\
+C:\Users\hugo1\Desktop\Stuff\Something\Calendar\Calendar\obj\Debug\net8.0-windows\
 Calendar
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-C:\Users\hugo1\Desktop\Stuff\Projects\Calendar\Calendar\App.xaml
+C:\Users\hugo1\Desktop\Stuff\Something\Calendar\Calendar\App.xaml
 71431319204
 1-320686414
 21-295340243
-2521030771041
+252-309061222
 Views\Competition\createCompetition.xaml;Views\Competition\deleteCompetition.xaml;Views\Competition\editCompetition.xaml;Views\Event\createEvent.xaml;Views\Event\deleteEvent.xaml;Views\Event\editEvent.xaml;Views\MainWindow.xaml;
 
-True
+False
 

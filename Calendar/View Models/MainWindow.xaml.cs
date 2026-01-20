@@ -83,7 +83,7 @@ namespace Calendar
                 cb_competition.DisplayMemberPath = "name";
 
 
-                var events = context.Event.Where(c => c.modalityId == selectedModalityId).ToList();
+                var events = context.Event.Where(c => c.modalityId == selectedModalityId ).Where(d => d.startDate >= DateTime.Today).ToList();
                 List<dynamic> result = new List<dynamic>();
                 foreach (var item in events)
                 {
@@ -119,6 +119,7 @@ namespace Calendar
                                  join junction in context.EventCompetition on e1.id equals junction.competitionId
                                  join e2 in context.Event on junction.eventId equals e2.id
                                  where e1.id == selectedCompetitionId
+                                 where e2.startDate >= DateTime.Today
                                  select new
                                  {
                                      name = e2.name,
@@ -256,6 +257,7 @@ namespace Calendar
                          join junction in context.EventCompetition on e1.id equals junction.competitionId
                          join e2 in context.Event on junction.eventId equals e2.id
                          join modality in context.Modality on e1.modalityId equals modality.id
+                         where e2.startDate >= DateTime.Today
                          select new
                          {
                              eventName = e2.name,
